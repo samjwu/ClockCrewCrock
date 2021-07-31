@@ -40,13 +40,13 @@ public class SubmissionManager : MonoBehaviour
     {
         SubmissionCount = SentSubmissions;
 
+        SaveChance = Math.Min(0.5f + (float) SavedCount / 10000f, 1f);
+        ChanceDisplay.GetComponent<Text>().text = string.Format("Save Chance: {0:n}%", SaveChance*100);
+
         SavedCount = SavedSubmissions;
         SavedDisplay.GetComponent<Text>().text = string.Format("Saved Submissions: {0:g}", SavedCount);
 
         BlammedCount = BlammedSubmissions;
         BlammedDisplay.GetComponent<Text>().text = string.Format("Blammed Submissions: {0:g}", BlammedCount);
-
-        SaveChance = Math.Min(0.5f + (float) SavedCount / 10000f, 1f);
-        ChanceDisplay.GetComponent<Text>().text = string.Format("Save Chance: {0:n}%", SaveChance*100);
     }
 }
