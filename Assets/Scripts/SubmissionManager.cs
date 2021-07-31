@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class SubmissionManager : MonoBehaviour
 {
+    public GameObject TitleDisplay;
+    public GameObject StatusDisplay;
+
     public static int SavedSubmissions;
     public GameObject SavedDisplay;
     public int SavedCount;
@@ -16,7 +19,16 @@ public class SubmissionManager : MonoBehaviour
 
     public static float SaveChance;
     public GameObject ChanceDisplay;
-    
+
+    void Start()
+    {
+        TitleDisplay.SetActive(false);
+        StatusDisplay.SetActive(false);
+        SavedDisplay.SetActive(false);
+        BlammedDisplay.SetActive(false);
+        ChanceDisplay.SetActive(false);
+    }
+
     void Update()
     {
         SavedCount = SavedSubmissions;
