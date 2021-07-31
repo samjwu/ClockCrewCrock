@@ -222,10 +222,10 @@ MonoBehaviour:
   SubmitButton: {fileID: 568871826}
   SubmissionName: {fileID: 1553643534}
   StatusDisplay: {fileID: 1476050579}
-  InfoText: {fileID: 1049305181}
   SavedDisplay: {fileID: 179111073}
   BlammedDisplay: {fileID: 383582873}
   ChanceDisplay: {fileID: 575953999}
+  InfoDisplay: {fileID: 1049305181}
 --- !u!4 &164744020
 Transform:
   m_ObjectHideFlags: 0
@@ -436,12 +436,12 @@ MonoBehaviour:
   TitleDisplay: {fileID: 185528834}
   SubmitButton: {fileID: 568871826}
   StatusDisplay: {fileID: 1476050579}
-  InfoText: {fileID: 1049305181}
   ChanceDisplay: {fileID: 575953999}
   SavedCount: 0
   SavedDisplay: {fileID: 179111073}
   BlammedCount: 0
   BlammedDisplay: {fileID: 383582873}
+  InfoDisplay: {fileID: 0}
 --- !u!4 &354055711
 Transform:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 1049305183}
   - component: {fileID: 1049305185}
   m_Layer: 5
-  m_Name: InfoText
+  m_Name: InfoDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

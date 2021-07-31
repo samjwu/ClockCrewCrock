@@ -17,22 +17,18 @@ public class SubmissionButton : MonoBehaviour
     public GameObject ChanceDisplay;
 
     public GameObject InfoDisplay;
-    private string InfoText;
-    private Animation InfoAnimation;
     private const float InfoAnimationLength = 7f;
 
     private IEnumerator coroutine;
 
     void Start()
     {
-        InfoText = InfoDisplay.GetComponent<Text>().text;
-        InfoText = "First, there was nothing.\n\n\n" +
+        InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n\n\n" +
             "Then, there was Strawberry Clock.\n\n\n" +
             "Strawberry Clock is the true King of the Portal and God of Newgrounds.\n\n\n" +
             "That Tom Fulp guy is just a lackey who carries out his will.";
-        InfoAnimation = InfoDisplay.GetComponent<Animation>();
 
-        coroutine = PlayAHistory(InfoAnimation);
+        coroutine = PlayAHistory(InfoDisplay.GetComponent<Animation>());
         StartCoroutine(coroutine);
     }
 
@@ -47,9 +43,9 @@ public class SubmissionButton : MonoBehaviour
             StatusDisplay.GetComponent<Text>().text = "Your submission just got\nBLAMMED!";
             BlammedDisplay.SetActive(true);
 
-            InfoText = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" + 
+            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" + 
                 "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";;
-            InfoAnimation.Play("InfoTextAnimation");
+            InfoDisplay.GetComponent<Animation>().Play("InfoTextAnimation");
 
             SubmitButton.SetActive(false);
 
@@ -59,13 +55,10 @@ public class SubmissionButton : MonoBehaviour
             SubmissionManager.BlammedSubmissions++;
         } else {
             if (SubmissionManager.SaveChance >= Random.Range(0.0f, 1.0f)) {
-                
                 StatusDisplay.GetComponent<Text>().text = "Your submission just got\nSAVED!";
-            
                 SubmissionManager.SavedSubmissions++;
             } else {
                 StatusDisplay.GetComponent<Text>().text = "Your submission just got\nBLAMMED!";
-                
                 SubmissionManager.BlammedSubmissions++;
             }
         }
@@ -75,11 +68,10 @@ public class SubmissionButton : MonoBehaviour
             SavedDisplay.SetActive(true);
             ChanceDisplay.SetActive(true);
 
-            InfoText = "The second legendary submission was named 'B'. This time, the users listened.\n\n" +
+            InfoDisplay.GetComponent<Text>().text = "The second legendary submission was named 'B'. This time, the users listened.\n\n" +
             "Over 1 trillion users came into being to worship the newly crowned 'King of The Portal'.\n\n" +
             "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...'";
-            InfoAnimation.Play("InfoTextAnimation");
-
+            InfoDisplay.GetComponent<Animation>().Play("InfoTextAnimation");
             SeenBHistory = true;
         }
     }
@@ -87,15 +79,13 @@ public class SubmissionButton : MonoBehaviour
     IEnumerator PlayAHistory(Animation animation)
     {
         animation.Play("InfoTextAnimation");
-
         while (animation.isPlaying)
         {
             yield return new WaitForEndOfFrame();
         }
 
         SubmitButton.SetActive(true);
-
-        InfoText = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
+        InfoDisplay.GetComponent<Text>().text = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
             "It was glorious.\n\n\n" + 
             "Click it now!";
         animation.Play("InfoTextAnimation");
