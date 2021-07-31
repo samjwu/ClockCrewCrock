@@ -8,10 +8,10 @@ public class SubmissionManager : MonoBehaviour
 {
     public static int SentSubmissions;
     public int SubmissionCount;
+
     public GameObject TitleDisplay;
-    public GameObject SubmissionButton;
+    public GameObject SubmitButton;
     public GameObject StatusDisplay;
-    public GameObject InfoText;
 
     public static float SaveChance;
     public GameObject ChanceDisplay;
@@ -24,17 +24,18 @@ public class SubmissionManager : MonoBehaviour
     public int BlammedCount;
     public GameObject BlammedDisplay;
 
+    public GameObject InfoDisplay;
+
     void Start()
     {
         TitleDisplay.SetActive(false);
-        SubmissionButton.SetActive(false);
+        SubmitButton.SetActive(false);
         StatusDisplay.SetActive(false);
-        //InfoText.SetActive(false);
 
         SavedDisplay.SetActive(false);
         BlammedDisplay.SetActive(false);
         ChanceDisplay.SetActive(false);
-}
+    }
 
     void Update()
     {

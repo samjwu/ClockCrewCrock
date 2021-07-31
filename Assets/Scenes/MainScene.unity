@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 164744020}
   - component: {fileID: 164744019}
   m_Layer: 0
-  m_Name: SubmissionObject
+  m_Name: ButtonObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,12 +219,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TitleDisplay: {fileID: 185528834}
+  SubmitButton: {fileID: 568871826}
+  SubmissionName: {fileID: 1553643534}
   StatusDisplay: {fileID: 1476050579}
   InfoText: {fileID: 1049305181}
   SavedDisplay: {fileID: 179111073}
   BlammedDisplay: {fileID: 383582873}
   ChanceDisplay: {fileID: 575953999}
-  SubmissionName: {fileID: 1553643534}
 --- !u!4 &164744020
 Transform:
   m_ObjectHideFlags: 0
@@ -269,7 +270,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1506703133}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -413,7 +414,7 @@ GameObject:
   - component: {fileID: 354055711}
   - component: {fileID: 354055710}
   m_Layer: 0
-  m_Name: MechanicsObject
+  m_Name: ManagerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,13 +434,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubmissionCount: 0
   TitleDisplay: {fileID: 185528834}
+  SubmitButton: {fileID: 568871826}
   StatusDisplay: {fileID: 1476050579}
   InfoText: {fileID: 1049305181}
+  ChanceDisplay: {fileID: 575953999}
   SavedCount: 0
   SavedDisplay: {fileID: 179111073}
   BlammedCount: 0
   BlammedDisplay: {fileID: 383582873}
-  ChanceDisplay: {fileID: 575953999}
 --- !u!4 &354055711
 Transform:
   m_ObjectHideFlags: 0
@@ -526,7 +528,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1506703133}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -629,7 +631,7 @@ GameObject:
   - component: {fileID: 568871829}
   - component: {fileID: 568871828}
   m_Layer: 5
-  m_Name: SubmissionButton
+  m_Name: SubmitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +781,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1506703133}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -859,11 +861,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1506703133}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 373.8482, y: -104.75}
+  m_AnchoredPosition: {x: 375, y: -104.75}
   m_SizeDelta: {x: 350, y: 309.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049305183
@@ -904,7 +906,6 @@ MonoBehaviour:
 
 
     Then, there was Strawberry Clock.
-
 
 
 
@@ -1129,10 +1130,10 @@ RectTransform:
   - {fileID: 185528835}
   - {fileID: 568871827}
   - {fileID: 1476050580}
+  - {fileID: 1049305182}
   - {fileID: 575954000}
   - {fileID: 179111074}
   - {fileID: 383582876}
-  - {fileID: 1049305182}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

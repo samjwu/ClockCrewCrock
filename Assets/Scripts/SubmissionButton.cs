@@ -5,28 +5,34 @@ using UnityEngine.UI;
 
 public class SubmissionButton : MonoBehaviour
 {
+    public static bool SeenBHistory = false;
+
     public GameObject TitleDisplay;
+    public GameObject SubmitButton;
+    public GameObject SubmissionName;
     public GameObject StatusDisplay;
-    public GameObject InfoText;
 
     public GameObject SavedDisplay;
     public GameObject BlammedDisplay;
     public GameObject ChanceDisplay;
-    public GameObject SubmissionName;
+
+    public GameObject InfoDisplay;
+    private string InfoText;
+    private Animation InfoAnimation;
+    private const float InfoAnimationLength = 7f;
 
     private IEnumerator coroutine;
 
     void Start()
     {
-        this.gameObject.SetActive(true);
-
-        InfoText.GetComponent<Text>().text = "First, there was nothing.\n\n\n" +
-            "Then, there was Strawberry Clock.\n\n\n\n" +
+        InfoText = InfoDisplay.GetComponent<Text>().text;
+        InfoText = "First, there was nothing.\n\n\n" +
+            "Then, there was Strawberry Clock.\n\n\n" +
             "Strawberry Clock is the true King of the Portal and God of Newgrounds.\n\n\n" +
             "That Tom Fulp guy is just a lackey who carries out his will.";
-        Animation animation = InfoText.GetComponent<Animation>();
+        InfoAnimation = InfoDisplay.GetComponent<Animation>();
 
-        coroutine = AnimationSequence(animation);
+        coroutine = PlayAHistory(InfoAnimation);
         StartCoroutine(coroutine);
     }
 
@@ -39,14 +45,16 @@ public class SubmissionButton : MonoBehaviour
             TitleDisplay.SetActive(true);
             StatusDisplay.SetActive(true);
             StatusDisplay.GetComponent<Text>().text = "Your submission just got\nBLAMMED!";
-            //InfoText.SetActive(true);
             BlammedDisplay.SetActive(true);
 
-            InfoText.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" + 
+            InfoText = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" + 
                 "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";;
-            InfoText.GetComponent<Animation>().Play("InfoTextAnimation");
+            InfoAnimation.Play("InfoTextAnimation");
 
-            SubmissionName.GetComponent<Text>().text = "B";
+            SubmitButton.SetActive(false);
+
+            coroutine = ReplaceAWithB(InfoAnimationLength);
+            StartCoroutine(coroutine);
 
             SubmissionManager.BlammedSubmissions++;
         } else {
@@ -62,31 +70,42 @@ public class SubmissionButton : MonoBehaviour
             }
         }
 
-        if (SubmissionManager.SavedSubmissions == 1)
+        if (SubmissionManager.SavedSubmissions == 1 && !SeenBHistory)
         {
             SavedDisplay.SetActive(true);
             ChanceDisplay.SetActive(true);
 
-            InfoText.GetComponent<Text>().text = "The second legendary submission was named 'B'. This time, the users listened.\n\n" +
-            "Over 1 trillion users came into being to worship the newly crowned 'King of The Portal'. " +
+            InfoText = "The second legendary submission was named 'B'. This time, the users listened.\n\n" +
+            "Over 1 trillion users came into being to worship the newly crowned 'King of The Portal'.\n\n" +
             "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...'";
-            InfoText.GetComponent<Animation>().Play("InfoTextAnimation");
+            InfoAnimation.Play("InfoTextAnimation");
+
+            SeenBHistory = true;
         }
     }
 
-    IEnumerator AnimationSequence(Animation animation)
+    IEnumerator PlayAHistory(Animation animation)
     {
         animation.Play("InfoTextAnimation");
-        InfoText.GetComponent<Animation>().Play("InfoTextAnimation");
 
         while (animation.isPlaying)
         {
             yield return new WaitForEndOfFrame();
         }
 
-        InfoText.GetComponent<Text>().text = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
+        SubmitButton.SetActive(true);
+
+        InfoText = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
             "It was glorious.\n\n\n" + 
             "Click it now!";
         animation.Play("InfoTextAnimation");
+    }
+
+    IEnumerator ReplaceAWithB(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        SubmitButton.SetActive(true);
+        SubmissionName.GetComponent<Text>().text = "B";
     }
 }
