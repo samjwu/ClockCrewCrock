@@ -6,31 +6,40 @@ using UnityEngine.UI;
 
 public class SubmissionManager : MonoBehaviour
 {
+    public static int SentSubmissions;
+    public int SubmissionCount;
     public GameObject TitleDisplay;
+    public GameObject SubmissionButton;
     public GameObject StatusDisplay;
-
-    public static int SavedSubmissions;
-    public GameObject SavedDisplay;
-    public int SavedCount;
-
-    public static int BlammedSubmissions;
-    public GameObject BlammedDisplay;
-    public int BlammedCount;
+    public GameObject InfoText;
 
     public static float SaveChance;
     public GameObject ChanceDisplay;
 
+    public static int SavedSubmissions;
+    public int SavedCount;
+    public GameObject SavedDisplay;
+
+    public static int BlammedSubmissions;
+    public int BlammedCount;
+    public GameObject BlammedDisplay;
+
     void Start()
     {
         TitleDisplay.SetActive(false);
+        SubmissionButton.SetActive(false);
         StatusDisplay.SetActive(false);
+        //InfoText.SetActive(false);
+
         SavedDisplay.SetActive(false);
         BlammedDisplay.SetActive(false);
         ChanceDisplay.SetActive(false);
-    }
+}
 
     void Update()
     {
+        SubmissionCount = SentSubmissions;
+
         SavedCount = SavedSubmissions;
         SavedDisplay.GetComponent<Text>().text = string.Format("Saved Submissions: {0:g}", SavedCount);
 

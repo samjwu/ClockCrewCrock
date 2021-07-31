@@ -220,11 +220,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TitleDisplay: {fileID: 185528834}
   StatusDisplay: {fileID: 1476050579}
+  InfoText: {fileID: 1049305181}
   SavedDisplay: {fileID: 179111073}
   BlammedDisplay: {fileID: 383582873}
   ChanceDisplay: {fileID: 575953999}
   SubmissionName: {fileID: 1553643534}
-  InfoText: {fileID: 1049305181}
 --- !u!4 &164744020
 Transform:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Saved Submissions:'
 --- !u!222 &179111076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -431,12 +431,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90d00128f9fa6a4982cb13c9a398fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SubmissionCount: 0
   TitleDisplay: {fileID: 185528834}
   StatusDisplay: {fileID: 1476050579}
-  SavedDisplay: {fileID: 179111073}
+  InfoText: {fileID: 1049305181}
   SavedCount: 0
-  BlammedDisplay: {fileID: 383582873}
+  SavedDisplay: {fileID: 179111073}
   BlammedCount: 0
+  BlammedDisplay: {fileID: 383582873}
   ChanceDisplay: {fileID: 575953999}
 --- !u!4 &354055711
 Transform:
@@ -503,7 +505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Blammed Submissions:'
 --- !u!222 &383582875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -817,7 +819,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Save Chance:'
 --- !u!222 &575954002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -897,7 +899,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STRAWBERRY CLOCK IS THE KING OF THE PORTAL
+  m_Text: 'First, there was nothing.
+
+
+
+    Then, there was Strawberry Clock.
+
+
+
+
+    Strawberry
+    Clock is the true King of the Portal and God of Newgrounds.
+
+
+
+    That Tom Fulp
+    guy is just a lackey who carries out his will.'
 --- !u!222 &1049305184
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -993,7 +1010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Your submission just got
 --- !u!222 &1476050582
 CanvasRenderer:
   m_ObjectHideFlags: 0
