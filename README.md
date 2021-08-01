@@ -1,12 +1,12 @@
 # Clock Crew Crock
 
-
+An interactive retelling of Newgrounds portal history and the Clock Crew from the perspective of Strawberry Clock.
 
 ### crock
 
 Definition
 
-> *Frum a absulootly, totaly, indispootably legit sorce of nollij and lerning fownded by definetly legit scawlers*
+> *From an absolute, totally, indisputably, legitimate source of nollij proofread by men of culture, learning, and academics*
 
 1. nonsence, hogwash, bilge, absolute bull, a waste of time and/or money, a sham. It's bogus - totally.
 

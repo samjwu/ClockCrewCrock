@@ -27,8 +27,11 @@ public class SubmissionButton : MonoBehaviour
             "Then, there was Strawberry Clock.\n\n\n" +
             "Strawberry Clock is the true King of the Portal and God of Newgrounds.\n\n\n" +
             "That Tom Fulp guy is just a lackey who carries out his will.";
+        string secondInfoText = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
+            "It was glorious.\n\n\n" +
+            "Click it now!";
 
-        coroutine = PlayAHistory(InfoDisplay.GetComponent<Animation>());
+        coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "A", secondInfoText);
         StartCoroutine(coroutine);
     }
 
@@ -42,14 +45,16 @@ public class SubmissionButton : MonoBehaviour
             StatusDisplay.SetActive(true);
             StatusDisplay.GetComponent<Text>().text = "Your submission just got\nBLAMMED!";
             BlammedDisplay.SetActive(true);
-
-            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" + 
-                "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";;
-            InfoDisplay.GetComponent<Animation>().Play("InfoTextAnimation");
-
             SubmitButton.SetActive(false);
 
-            coroutine = ReplaceAWithB(InfoAnimationLength);
+            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" +
+                    "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";
+            string secondInfoText = "However, Strawberry Clock knew the portal needed its King.\n\n" + 
+                "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n\n" + 
+                "This too was glorious.\n\n\n" + 
+                "Keep clicking it until something happens!";
+
+            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText);
             StartCoroutine(coroutine);
 
             SubmissionManager.BlammedSubmissions++;
@@ -68,15 +73,15 @@ public class SubmissionButton : MonoBehaviour
             SavedDisplay.SetActive(true);
             ChanceDisplay.SetActive(true);
 
-            InfoDisplay.GetComponent<Text>().text = "The second legendary submission was named 'B'. This time, the users listened.\n\n" +
-            "Over 1 trillion users came into being to worship the newly crowned 'King of The Portal'.\n\n" +
+            InfoDisplay.GetComponent<Text>().text = "This time, the users listened. The legendary 'B' was saved.\n\n" +
+            "Trillions of users began to worship the King of The Portal.\n\n" +
             "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...'";
             InfoDisplay.GetComponent<Animation>().Play("InfoTextAnimation");
             SeenBHistory = true;
         }
     }
 
-    IEnumerator PlayAHistory(Animation animation)
+    IEnumerator SequenceAnimations(Animation animation, string submissionName, string infoText)
     {
         animation.Play("InfoTextAnimation");
         while (animation.isPlaying)
@@ -85,17 +90,8 @@ public class SubmissionButton : MonoBehaviour
         }
 
         SubmitButton.SetActive(true);
-        InfoDisplay.GetComponent<Text>().text = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
-            "It was glorious.\n\n\n" + 
-            "Click it now!";
+        SubmissionName.GetComponent<Text>().text = submissionName;
+        InfoDisplay.GetComponent<Text>().text = infoText;
         animation.Play("InfoTextAnimation");
-    }
-
-    IEnumerator ReplaceAWithB(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-
-        SubmitButton.SetActive(true);
-        SubmissionName.GetComponent<Text>().text = "B";
     }
 }
