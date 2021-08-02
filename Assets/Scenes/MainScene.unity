@@ -438,6 +438,7 @@ MonoBehaviour:
   SavedDisplay: {fileID: 179111073}
   BlammedDisplay: {fileID: 383582873}
   ChanceDisplay: {fileID: 575953999}
+  ClockButton: {fileID: 160012895}
   InfoDisplay: {fileID: 1049305181}
 --- !u!4 &164744020
 Transform:
@@ -667,7 +668,7 @@ MonoBehaviour:
   SavedDisplay: {fileID: 179111073}
   BlammedCount: 0
   BlammedDisplay: {fileID: 383582873}
-  InfoDisplay: {fileID: 0}
+  ClockButton: {fileID: 160012895}
 --- !u!4 &354055711
 Transform:
   m_ObjectHideFlags: 0
