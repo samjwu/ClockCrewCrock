@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClockSubmitter : MonoBehaviour
 {
     public static int SubmissionIncrease;
-    public int SubmissionIncreaseCount = 0;
+    public int SubmissionIncreaseCount = 1;
     public bool CreatingSubmission = false;
 
     void Start()
