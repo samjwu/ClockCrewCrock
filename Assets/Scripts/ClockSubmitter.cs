@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ClockSubmitter : MonoBehaviour
 {
-    public static int SubmissionIncrease = 1;
-    public int SubmissionIncreaseCount;
-    public bool CreatingSubmission = false;
+    public static int StrawberrySubmitOutput = 1;
+    public int StrawberrySubmitting;
+    public bool StrawberryCreating = false;
 
     void Start()
     {
@@ -16,19 +16,19 @@ public class ClockSubmitter : MonoBehaviour
     
     void Update()
     {
-        SubmissionIncreaseCount = SubmissionIncrease;
+        StrawberrySubmitting = StrawberrySubmitOutput;
 
-        if (CreatingSubmission == false)
+        if (StrawberryCreating == false)
         {
-            CreatingSubmission = true;
-            StartCoroutine(CreateSubmission());
+            StrawberryCreating = true;
+            StartCoroutine(StrawberryCreate());
         }
     }
 
-    IEnumerator CreateSubmission()
+    IEnumerator StrawberryCreate()
     {
-        SubmissionManager.SavedSubmissions += SubmissionIncreaseCount;
+        SubmissionManager.SavedSubmissions += StrawberrySubmitting;
         yield return new WaitForSeconds(1f);
-        CreatingSubmission = false;
+        StrawberryCreating = false;
     }
 }

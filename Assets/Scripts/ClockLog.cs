@@ -20,6 +20,7 @@ public class ClockLog : MonoBehaviour
     {
         ClockSubmitter.SetActive(true);
         SubmissionManager.SavedSubmissions -= ClockManager.StrawberryCost;
+        SubmissionManager.BlammedSubmissions += ClockManager.StrawberryCost;
         ClockManager.StrawberryCost *= 2;
     }
 }
