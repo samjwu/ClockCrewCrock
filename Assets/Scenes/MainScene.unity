@@ -153,7 +153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 160012896}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -298,8 +298,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 41307739}
   - {fileID: 286239489}
+  - {fileID: 41307739}
   m_Father: {fileID: 1506703133}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -439,7 +439,7 @@ MonoBehaviour:
   SavedDisplay: {fileID: 179111073}
   BlammedDisplay: {fileID: 383582873}
   ChanceDisplay: {fileID: 575953999}
-  StrawberryButton: {fileID: 0}
+  StrawberryButton: {fileID: 160012895}
   InfoDisplay: {fileID: 1049305181}
 --- !u!4 &164744020
 Transform:
@@ -661,7 +661,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 160012896}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -701,7 +701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cost: 1 Submission'
+  m_Text: 'Cost (Saves): 1'
 --- !u!222 &286239491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -721,7 +721,6 @@ GameObject:
   - component: {fileID: 354055711}
   - component: {fileID: 354055710}
   - component: {fileID: 354055713}
-  - component: {fileID: 354055712}
   m_Layer: 0
   m_Name: ManagerObject
   m_TagString: Untagged
@@ -750,7 +749,7 @@ MonoBehaviour:
   SavedDisplay: {fileID: 179111073}
   BlammedCount: 0
   BlammedDisplay: {fileID: 383582873}
-  StrawberryButton: {fileID: 0}
+  StrawberryButton: {fileID: 160012895}
 --- !u!4 &354055711
 Transform:
   m_ObjectHideFlags: 0
@@ -765,21 +764,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &354055712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354055709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0141e1a4f5f74834192289bff90a3eb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSaved: 0
-  StrawberryButton: {fileID: 0}
-  StrawberryText: {fileID: 0}
 --- !u!114 &354055713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,8 +777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSaved: 0
-  StrawberryButton: {fileID: 0}
-  StrawberryText: {fileID: 0}
+  StrawberryButton: {fileID: 160012895}
+  StrawberryCostText: {fileID: 286239488}
+  StrawberryText: {fileID: 41307738}
 --- !u!1 &383582873
 GameObject:
   m_ObjectHideFlags: 0

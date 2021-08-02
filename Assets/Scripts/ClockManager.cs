@@ -8,6 +8,7 @@ public class ClockManager : MonoBehaviour
     public static int StrawberryCost = 1;
     public int currentSaved;
     public GameObject StrawberryButton;
+    public GameObject StrawberryCostText;
     public GameObject StrawberryText;
 
     void Start()
@@ -18,7 +19,9 @@ public class ClockManager : MonoBehaviour
     void Update()
     {
         currentSaved = SubmissionManager.SavedSubmissions;
-        if (currentSaved >= StrawberryCost)
+        StrawberryCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", StrawberryCost);
+
+        if (currentSaved >= StrawberryCost) 
         {
             StrawberryButton.GetComponent<Button>().interactable = true;
         }
