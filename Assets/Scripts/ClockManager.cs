@@ -24,6 +24,9 @@ public class ClockManager : MonoBehaviour
         if (currentSaved >= StrawberryCost) 
         {
             StrawberryButton.GetComponent<Button>().interactable = true;
+        } else
+        {
+            StrawberryButton.GetComponent<Button>().interactable = false;
         }
     }
 }
