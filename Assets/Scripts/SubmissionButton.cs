@@ -24,8 +24,8 @@ public class SubmissionButton : MonoBehaviour
     void Start()
     {
         InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n\n\n" +
-            "Then, there was Strawberry Clock.\n\n\n" +
-            "Strawberry Clock is the true King of the Portal and God of Newgrounds.\n\n\n" +
+            "Then, there was StrawberryClock.\n\n\n" +
+            "StrawberryClock is the true King of the Portal and God of Newgrounds.\n\n\n" +
             "That Tom Fulp guy is just a lackey who carries out his will.";
         string secondInfoText = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
             "It was glorious.\n\n\n" +
@@ -47,7 +47,7 @@ public class SubmissionButton : MonoBehaviour
             BlammedDisplay.SetActive(true);
             SubmitButton.SetActive(false);
 
-            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" +
+            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of StrawberryClock, BLAMMED 'A'.\n\n" +
                     "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";
             string secondInfoText = "However, Strawberry Clock knew the portal needed its King.\n\n" + 
                 "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n\n" + 
@@ -75,14 +75,21 @@ public class SubmissionButton : MonoBehaviour
 
             InfoDisplay.GetComponent<Text>().text = "This time, the users listened. The legendary 'B' was saved.\n\n" +
             "Trillions of users began to worship the King of The Portal.\n\n" +
-            "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...'";
-            InfoDisplay.GetComponent<Animation>().Play("InfoTextAnimation");
+            "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...";
+            string secondInfoText = "Holy clock! Is that who I think it is?\n\n" +
+                "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n\n\n" +
+                "Quickly, click on him now!";
+
+            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText);
+            StartCoroutine(coroutine);
+
             SeenBHistory = true;
         }
     }
 
     IEnumerator SequenceAnimations(Animation animation, string submissionName, string infoText)
     {
+        animation.Rewind("InfoTextAnimation");
         animation.Play("InfoTextAnimation");
         while (animation.isPlaying)
         {

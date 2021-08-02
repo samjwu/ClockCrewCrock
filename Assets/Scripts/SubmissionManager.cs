@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SubmissionManager : MonoBehaviour
 {
+    // click count
     public static int SentSubmissions;
     public int SubmissionCount;
 
