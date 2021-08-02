@@ -31,9 +31,9 @@ public class SubmissionButton : MonoBehaviour
 
     void Start()
     {
-        InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n\n\n" +
+        InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n\n" +
             "Then, there was StrawberryClock.\n\n\n" +
-            "StrawberryClock is the true King of the Portal and God of Newgrounds.\n\n\n" +
+            "StrawberryClock is the true King of the Portal and God of Newgrounds.\n\n" +
             "That Tom Fulp guy is just a lackey who carries out his will.";
         string secondInfoText = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
             "It was glorious.\n\n\n" +
