@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockSubmitters : MonoBehaviour
+public class ClockSubmitter : MonoBehaviour
 {
     public static int SubmissionIncrease;
     public int SubmissionIncreaseCount = 0;
@@ -28,7 +28,7 @@ public class ClockSubmitters : MonoBehaviour
     IEnumerator CreateSubmission()
     {
         SubmissionManager.SavedSubmissions += SubmissionIncreaseCount;
-
         yield return new WaitForSeconds(1f);
+        CreatingSubmission = false;
     }
 }
