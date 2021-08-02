@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -84.2}
-  m_SizeDelta: {x: 0, y: -128.0123}
+  m_AnchoredPosition: {x: 0, y: -79.853}
+  m_SizeDelta: {x: 0, y: -159.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41307740
 MonoBehaviour:
@@ -300,6 +300,7 @@ RectTransform:
   m_Children:
   - {fileID: 286239489}
   - {fileID: 41307739}
+  - {fileID: 898738755}
   m_Father: {fileID: 1506703133}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -354,7 +355,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 164744021}
         m_TargetAssemblyTypeName: ClockLog, Assembly-CSharp
-        m_MethodName: StartClockSubmitter
+        m_MethodName: LevelUpStrawberry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -780,6 +781,7 @@ MonoBehaviour:
   StrawberryButton: {fileID: 160012895}
   StrawberryCostText: {fileID: 286239488}
   StrawberryText: {fileID: 41307738}
+  StrawberryPowerText: {fileID: 898738752}
 --- !u!1 &383582873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1156,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575953999}
   m_CullTransparentMesh: 1
+--- !u!1 &898738752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898738755}
+  - component: {fileID: 898738754}
+  - component: {fileID: 898738753}
+  m_Layer: 5
+  m_Name: StrawberryPowerText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &898738753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898738752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Output (Submissions/Sec): 1'
+--- !u!222 &898738754
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898738752}
+  m_CullTransparentMesh: 1
+--- !u!224 &898738755
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898738752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 160012896}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -115}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1049305181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,8 +1656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6ffa4e717649e40b15450f8abb8524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SubmissionIncreaseCount: 0
-  CreatingSubmission: 0
+  StrawberrySubmitting: 0
+  StrawberryCreating: 0
 --- !u!4 &1570386076
 Transform:
   m_ObjectHideFlags: 0

@@ -16,11 +16,14 @@ public class ClockLog : MonoBehaviour
         
     }
 
-    public void StartClockSubmitter()
+    public void LevelUpStrawberry()
     {
         ClockSubmitter.SetActive(true);
         SubmissionManager.SavedSubmissions -= ClockManager.StrawberryCost;
         SubmissionManager.BlammedSubmissions += ClockManager.StrawberryCost;
+
         ClockManager.StrawberryCost *= 2;
+        ClockManager.StrawberryPower += 1;
+        ClockManager.TotalPower += 1;
     }
 }
