@@ -350,7 +350,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 160012898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 164744021}
+        m_TargetAssemblyTypeName: ClockLog, Assembly-CSharp
+        m_MethodName: StartClockSubmitter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &160012898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164744020}
   - component: {fileID: 164744019}
+  - component: {fileID: 164744021}
   m_Layer: 0
   m_Name: ButtonObject
   m_TagString: Untagged
@@ -440,6 +453,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164744021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164744018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98b6884586a1424481180cb1fda5ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClockSubmitter: {fileID: 1570386074}
 --- !u!1 &179111073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,3 +1448,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553643534}
   m_CullTransparentMesh: 1
+--- !u!1 &1570386074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570386076}
+  - component: {fileID: 1570386075}
+  m_Layer: 0
+  m_Name: ClockObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1570386075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570386074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6ffa4e717649e40b15450f8abb8524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubmissionIncreaseCount: 0
+  CreatingSubmission: 0
+--- !u!4 &1570386076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570386074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 568.7224, y: 280.48547, z: -359.87347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
