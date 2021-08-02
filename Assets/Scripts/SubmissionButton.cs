@@ -16,10 +16,18 @@ public class SubmissionButton : MonoBehaviour
     public GameObject BlammedDisplay;
     public GameObject ChanceDisplay;
 
+    public GameObject ClockButton;
+
     public GameObject InfoDisplay;
     private const float InfoAnimationLength = 7f;
 
     private IEnumerator coroutine;
+
+    enum EnableTypes
+    {
+        Submit = 0,
+        Clock = 1
+    }
 
     void Start()
     {
@@ -31,7 +39,7 @@ public class SubmissionButton : MonoBehaviour
             "It was glorious.\n\n\n" +
             "Click it now!";
 
-        coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "A", secondInfoText);
+        coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "A", secondInfoText, (int) EnableTypes.Submit);
         StartCoroutine(coroutine);
     }
 
@@ -54,7 +62,7 @@ public class SubmissionButton : MonoBehaviour
                 "This too was glorious.\n\n\n" + 
                 "Keep clicking it until something happens!";
 
-            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText);
+            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Submit);
             StartCoroutine(coroutine);
 
             SubmissionManager.BlammedSubmissions++;
@@ -80,14 +88,14 @@ public class SubmissionButton : MonoBehaviour
                 "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n\n\n" +
                 "Quickly, click on him now!";
 
-            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText);
+            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Clock);
             StartCoroutine(coroutine);
 
             SeenBHistory = true;
         }
     }
 
-    IEnumerator SequenceAnimations(Animation animation, string submissionName, string infoText)
+    IEnumerator SequenceAnimations(Animation animation, string submissionName, string infoText, int enableType)
     {
         animation.Rewind("InfoTextAnimation");
         animation.Play("InfoTextAnimation");
@@ -96,7 +104,16 @@ public class SubmissionButton : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        SubmitButton.SetActive(true);
+        switch (enableType)
+        {
+            case (int) EnableTypes.Submit:
+                SubmitButton.SetActive(true);
+                break;
+            case (int) EnableTypes.Clock:
+                ClockButton.SetActive(true);
+                break;
+        }
+
         SubmissionName.GetComponent<Text>().text = submissionName;
         InfoDisplay.GetComponent<Text>().text = infoText;
         animation.Play("InfoTextAnimation");
