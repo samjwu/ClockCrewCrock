@@ -16,7 +16,7 @@ public class SubmissionButton : MonoBehaviour
     public GameObject BlammedDisplay;
     public GameObject ChanceDisplay;
 
-    public GameObject ClockButton;
+    public GameObject StrawberryButton;
 
     public GameObject InfoDisplay;
     private const float InfoAnimationLength = 7f;
@@ -57,7 +57,7 @@ public class SubmissionButton : MonoBehaviour
 
             InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of StrawberryClock, BLAMMED 'A'.\n\n" +
                     "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";
-            string secondInfoText = "However, Strawberry Clock knew the portal needed its King.\n\n" + 
+            string secondInfoText = "However, StrawberryClock knew the portal needed its King.\n\n" + 
                 "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n\n" + 
                 "This too was glorious.\n\n\n" + 
                 "Keep clicking it until something happens!";
@@ -110,7 +110,7 @@ public class SubmissionButton : MonoBehaviour
                 SubmitButton.SetActive(true);
                 break;
             case (int) EnableTypes.Clock:
-                ClockButton.SetActive(true);
+                StrawberryButton.SetActive(true);
                 break;
         }
 
