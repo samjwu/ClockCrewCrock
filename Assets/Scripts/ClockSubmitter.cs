@@ -16,6 +16,7 @@ public class ClockSubmitter : MonoBehaviour
     
     void Update()
     {
+        StrawberrySubmitOutput = ClockManager.StrawberryPower;
         StrawberrySubmitting = StrawberrySubmitOutput;
 
         if (StrawberryCreating == false)

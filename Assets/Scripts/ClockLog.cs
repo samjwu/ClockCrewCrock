@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClockLog : MonoBehaviour
 {
     public GameObject ClockSubmitter;
+    public AudioSource StrawberrySound;
 
     void Start()
     {
@@ -18,6 +19,8 @@ public class ClockLog : MonoBehaviour
 
     public void LevelUpStrawberry()
     {
+        StrawberrySound.Play();
+
         ClockSubmitter.SetActive(true);
         SubmissionManager.SavedSubmissions -= ClockManager.StrawberryCost;
         SubmissionManager.BlammedSubmissions += ClockManager.StrawberryCost;
