@@ -19,5 +19,7 @@ public class ClockLog : MonoBehaviour
     public void StartClockSubmitter()
     {
         ClockSubmitter.SetActive(true);
+        SubmissionManager.SavedSubmissions -= ClockManager.StrawberryCost;
+        ClockManager.StrawberryCost *= 2;
     }
 }

@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class ClockManager : MonoBehaviour
 {
-    public static int StrawberryCost;
+    public static int StrawberryCost = 1;
     public int currentSaved;
-    public GameObject ClockButton;
-    public GameObject ClockText;
+    public GameObject StrawberryButton;
+    public GameObject StrawberryText;
 
     void Start()
     {
@@ -18,9 +18,9 @@ public class ClockManager : MonoBehaviour
     void Update()
     {
         currentSaved = SubmissionManager.SavedSubmissions;
-        if (currentSaved >= 0)
+        if (currentSaved >= StrawberryCost)
         {
-            ClockButton.GetComponent<Button>().interactable = true;
+            StrawberryButton.GetComponent<Button>().interactable = true;
         }
     }
 }
