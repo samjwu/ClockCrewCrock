@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ClockSubmitter : MonoBehaviour
 {
-    public static int SubmissionIncrease;
-    public int SubmissionIncreaseCount = 1;
+    public static int SubmissionIncrease = 1;
+    public int SubmissionIncreaseCount;
     public bool CreatingSubmission = false;
 
     void Start()
