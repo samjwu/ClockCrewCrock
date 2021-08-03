@@ -17,6 +17,7 @@ public class ClockLog : MonoBehaviour
         
     }
 
+    // On Click StrawberryButton
     public void LevelUpStrawberry()
     {
         StrawberrySound.Play();
