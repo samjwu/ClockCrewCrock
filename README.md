@@ -11,7 +11,7 @@ Clock Crew Crock (AKA CCC) was made for [Clock Day 2021](https://www.newgrounds.
 
 Strictly speaking, CCC is a clicker/incremental game, but it plays more like an interactive story (that is mostly apocryphal and entirely satirical!).
 
-Since I don't really like incremental games that are either endless or take a long time to finish (eg: longer than a week), this game is short and sweet (like a strawberry!).  
+Since I don't really like incremental games that are either endless or take a long time to finish (eg: longer than a week), this game is short and sweet. (Like a strawberry!)
 You can beat it in under 5 minutes.
 
 ## Satire (for the game submission)
@@ -22,7 +22,7 @@ Join us on a legendary legend of legendary proportions about the legendary Straw
 
 Click your way through Portal History, following "A" beginning of Strawberry Clock trying to "B" the best King of the Portal that he can "B".
 
-Learn of the Herculean tasks undertaken by the Clock Crew to bring peace and love to all the mouth-breathing simpletons &#151;I mean intelligent, honored users of Newgrounds.
+Learn of the Herculean tasks undertaken by the Clock Crew to bring peace and love to all the mouth-breathing simpletons &mdash;I mean intelligent, honored users of Newgrounds.
 
 Umm... this game is awesome. Vote 5. Also, make sure you beat it. It only takes 5 minutes. And remember to vote 5.  
 Actually, you don't even have to play the game. Just vote 5 and favorite it.  
