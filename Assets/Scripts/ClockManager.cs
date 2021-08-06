@@ -21,6 +21,27 @@ public class ClockManager : MonoBehaviour
     public GameObject OrangeText;
     public GameObject OrangePowerText;
 
+    public static int AppleCost = 2;
+    public static int ApplePower = 2;
+    public GameObject AppleButton;
+    public GameObject AppleCostText;
+    public GameObject AppleText;
+    public GameObject ApplePowerText;
+
+    public static int RaspberryCost = 2;
+    public static int RaspberryPower = 2;
+    public GameObject RaspberryButton;
+    public GameObject RaspberryCostText;
+    public GameObject RaspberryText;
+    public GameObject RaspberryPowerText;
+
+    public static int PineappleCost = 2;
+    public static int PineapplePower = 2;
+    public GameObject PineappleButton;
+    public GameObject PineappleCostText;
+    public GameObject PineappleText;
+    public GameObject PineapplePowerText;
+
     public static int TotalPower = 1;
 
     void Start()
@@ -53,6 +74,42 @@ public class ClockManager : MonoBehaviour
         else
         {
             OrangeButton.GetComponent<Button>().interactable = false;
+        }
+
+        AppleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", AppleCost);
+        ApplePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", ApplePower);
+
+        if (currentSaved >= AppleCost)
+        {
+            AppleButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            AppleButton.GetComponent<Button>().interactable = false;
+        }
+
+        RaspberryCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", RaspberryCost);
+        RaspberryPowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", RaspberryPower);
+
+        if (currentSaved >= RaspberryCost)
+        {
+            RaspberryButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            RaspberryButton.GetComponent<Button>().interactable = false;
+        }
+
+        PineappleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", PineappleCost);
+        PineapplePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", PineapplePower);
+
+        if (currentSaved >= PineappleCost)
+        {
+            PineappleButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            PineappleButton.GetComponent<Button>().interactable = false;
         }
     }
 }
