@@ -38,12 +38,12 @@ public class SubmissionButton : MonoBehaviour
 
     void Start()
     {
-        InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n\n" +
-            "Then, there was StrawberryClock.\n\n" +
-            "StrawberryClock is the true King of the Portal and God of Newgrounds.\n\n" +
+        InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n" +
+            "Then, there was StrawberryClock.\n" +
+            "StrawberryClock is the true King of the Portal and God of Newgrounds.\n" +
             "That Tom Fulp guy is just a lackey who carries out his will.";
-        string secondInfoText = "The first legendary submission by StrawberryClock was named 'A'.\n\n" +
-            "It was glorious.\n\n\n" +
+        string secondInfoText = "The first legendary submission by StrawberryClock was named 'A'.\n" +
+            "It was glorious.\n" +
             "Click it now!";
 
         coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "A", secondInfoText, (int) EnableTypes.Submit);
@@ -63,11 +63,11 @@ public class SubmissionButton : MonoBehaviour
             BlammedDisplay.SetActive(true);
             SubmitButton.SetActive(false);
 
-            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of StrawberryClock, BLAMMED 'A'.\n\n" +
+            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of StrawberryClock, BLAMMED 'A'.\n" +
                     "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";
-            string secondInfoText = "However, StrawberryClock knew the portal needed its King.\n\n" + 
-                "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n\n" + 
-                "This too was glorious.\n\n\n" + 
+            string secondInfoText = "However, StrawberryClock knew the portal needed its King.\n" + 
+                "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n" + 
+                "This too was glorious.\n" + 
                 "Keep clicking it until something happens!";
 
             coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Submit);
@@ -91,11 +91,11 @@ public class SubmissionButton : MonoBehaviour
             SavedDisplay.SetActive(true);
             ChanceDisplay.SetActive(true);
 
-            InfoDisplay.GetComponent<Text>().text = "This time, the users listened. The legendary 'B' was saved.\n\n" +
-            "Trillions of users began to worship the King of The Portal.\n\n" +
+            InfoDisplay.GetComponent<Text>().text = "This time, the users listened. The legendary 'B' was saved.\n" +
+            "Trillions of users began to worship the King of The Portal.\n" +
             "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...";
-            string secondInfoText = "Holy clock! Is that who I think it is?\n\n" +
-                "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n\n\n" +
+            string secondInfoText = "Holy clock! Is that who I think it is?\n" +
+                "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n" +
                 "Quickly, click on him now!";
 
             coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Strawberry);
