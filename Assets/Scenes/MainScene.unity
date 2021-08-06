@@ -706,6 +706,9 @@ MonoBehaviour:
   ChanceDisplay: {fileID: 575953999}
   StrawberryButton: {fileID: 160012895}
   OrangeButton: {fileID: 1424220297}
+  AppleButton: {fileID: 215552694}
+  RaspberryButton: {fileID: 6322438}
+  PineappleButton: {fileID: 1554000575}
   InfoDisplay: {fileID: 1049305181}
 --- !u!4 &164744020
 Transform:
@@ -736,6 +739,9 @@ MonoBehaviour:
   ClockSubmitter: {fileID: 1570386074}
   StrawberrySound: {fileID: 1699134631}
   OrangeSound: {fileID: 265065738}
+  AppleSound: {fileID: 0}
+  RaspberrySound: {fileID: 0}
+  PineappleSound: {fileID: 0}
 --- !u!1 &179111073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1282,9 @@ MonoBehaviour:
   BlammedDisplay: {fileID: 383582873}
   StrawberryButton: {fileID: 160012895}
   OrangeButton: {fileID: 1424220297}
+  AppleButton: {fileID: 215552694}
+  RaspberryButton: {fileID: 6322438}
+  PineappleButton: {fileID: 1554000575}
 --- !u!4 &354055711
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,6 +1320,18 @@ MonoBehaviour:
   OrangeCostText: {fileID: 1206169445}
   OrangeText: {fileID: 485258003}
   OrangePowerText: {fileID: 1331560602}
+  AppleButton: {fileID: 215552694}
+  AppleCostText: {fileID: 1358388375}
+  AppleText: {fileID: 1343138209}
+  ApplePowerText: {fileID: 475943989}
+  RaspberryButton: {fileID: 6322438}
+  RaspberryCostText: {fileID: 480595115}
+  RaspberryText: {fileID: 386105870}
+  RaspberryPowerText: {fileID: 858848804}
+  PineappleButton: {fileID: 1554000575}
+  PineappleCostText: {fileID: 460204293}
+  PineappleText: {fileID: 1651262228}
+  PineapplePowerText: {fileID: 650006947}
 --- !u!1 &383582873
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,6 +3957,12 @@ MonoBehaviour:
   StrawberryCreating: 0
   OrangeSubmitting: 0
   OrangeCreating: 0
+  AppleSubmitting: 0
+  AppleCreating: 0
+  RaspberrySubmitting: 0
+  RaspberryCreating: 0
+  PineappleSubmitting: 0
+  PineappleCreating: 0
 --- !u!4 &1570386076
 Transform:
   m_ObjectHideFlags: 0
