@@ -20,6 +20,9 @@ public class SubmissionButton : MonoBehaviour
 
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
+    public GameObject AppleButton;
+    public GameObject RaspberryButton;
+    public GameObject PineappleButton;
 
     public GameObject InfoDisplay;
     private const float InfoAnimationLength = 7f;
@@ -125,6 +128,15 @@ public class SubmissionButton : MonoBehaviour
                 break;
             case (int)EnableTypes.Orange:
                 OrangeButton.SetActive(true);
+                break;
+            case (int)EnableTypes.Apple:
+                AppleButton.SetActive(true);
+                break;
+            case (int)EnableTypes.Raspberry:
+                RaspberryButton.SetActive(true);
+                break;
+            case (int)EnableTypes.Pineapple:
+                PineappleButton.SetActive(true);
                 break;
         }
 
