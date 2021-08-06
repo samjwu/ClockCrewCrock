@@ -19,6 +19,7 @@ public class SubmissionButton : MonoBehaviour
     public GameObject ChanceDisplay;
 
     public GameObject StrawberryButton;
+    public GameObject OrangeButton;
 
     public GameObject InfoDisplay;
     private const float InfoAnimationLength = 7f;
@@ -28,7 +29,11 @@ public class SubmissionButton : MonoBehaviour
     enum EnableTypes
     {
         Submit = 0,
-        Clock = 1
+        Strawberry = 1,
+        Orange = 2,
+        Apple = 3,
+        Raspberry = 4,
+        Pineapple = 5
     }
 
     void Start()
@@ -93,7 +98,7 @@ public class SubmissionButton : MonoBehaviour
                 "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n\n\n" +
                 "Quickly, click on him now!";
 
-            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Clock);
+            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Strawberry);
             StartCoroutine(coroutine);
 
             SeenBHistory = true;
@@ -114,8 +119,11 @@ public class SubmissionButton : MonoBehaviour
             case (int) EnableTypes.Submit:
                 SubmitButton.SetActive(true);
                 break;
-            case (int) EnableTypes.Clock:
+            case (int) EnableTypes.Strawberry:
                 StrawberryButton.SetActive(true);
+                break;
+            case (int)EnableTypes.Orange:
+                OrangeButton.SetActive(true);
                 break;
         }
 

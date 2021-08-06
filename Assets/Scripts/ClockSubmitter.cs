@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ClockSubmitter : MonoBehaviour
 {
-    public static int StrawberrySubmitOutput = 1;
+    public static int StrawberrySubmitOutput;
     public int StrawberrySubmitting;
     public bool StrawberryCreating = false;
+
+    public static int OrangeSubmitOutput;
+    public int OrangeSubmitting;
+    public bool OrangeCreating = false;
 
     void Start()
     {
@@ -24,6 +28,15 @@ public class ClockSubmitter : MonoBehaviour
             StrawberryCreating = true;
             StartCoroutine(StrawberryCreate());
         }
+
+        OrangeSubmitOutput = ClockManager.OrangePower;
+        OrangeSubmitting = OrangeSubmitOutput;
+
+        if (OrangeCreating == false)
+        {
+            OrangeCreating = true;
+            StartCoroutine(OrangeCreate());
+        }
     }
 
     IEnumerator StrawberryCreate()
@@ -31,5 +44,12 @@ public class ClockSubmitter : MonoBehaviour
         SubmissionManager.SavedSubmissions += StrawberrySubmitting;
         yield return new WaitForSeconds(1f);
         StrawberryCreating = false;
+    }
+
+    IEnumerator OrangeCreate()
+    {
+        SubmissionManager.SavedSubmissions += OrangeSubmitting;
+        yield return new WaitForSeconds(1f);
+        OrangeCreating = false;
     }
 }

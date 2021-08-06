@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: abea899f8ef8d3941b83f9545414ca92, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 1.9999986, g: 1.9999986, b: 1.9999986, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1375,7 +1375,6 @@ GameObject:
   - component: {fileID: 1049305182}
   - component: {fileID: 1049305184}
   - component: {fileID: 1049305183}
-  - component: {fileID: 1049305185}
   m_Layer: 5
   m_Name: InfoDisplay
   m_TagString: Untagged
@@ -1399,8 +1398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 725.3784, y: -266.88}
-  m_SizeDelta: {x: 501.9456, y: 542.88}
+  m_AnchoredPosition: {x: 630, y: -270}
+  m_SizeDelta: {x: 660, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049305183
 MonoBehaviour:
@@ -1458,22 +1457,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049305181}
   m_CullTransparentMesh: 1
---- !u!111 &1049305185
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049305181}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b786bcdbd21319444bdc5f603980007f, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b786bcdbd21319444bdc5f603980007f, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1181075579
 GameObject:
   m_ObjectHideFlags: 0

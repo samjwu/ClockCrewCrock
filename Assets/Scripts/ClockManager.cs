@@ -14,6 +14,13 @@ public class ClockManager : MonoBehaviour
     public GameObject StrawberryText;
     public GameObject StrawberryPowerText;
 
+    public static int OrangeCost = 2;
+    public static int OrangePower = 2;
+    public GameObject OrangeButton;
+    public GameObject OrangeCostText;
+    public GameObject OrangeText;
+    public GameObject OrangePowerText;
+
     public static int TotalPower = 1;
 
     void Start()
@@ -24,6 +31,7 @@ public class ClockManager : MonoBehaviour
     void Update()
     {
         currentSaved = SubmissionManager.SavedSubmissions;
+        
         StrawberryCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", StrawberryCost);
         StrawberryPowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", StrawberryPower);
 
@@ -33,6 +41,18 @@ public class ClockManager : MonoBehaviour
         } else
         {
             StrawberryButton.GetComponent<Button>().interactable = false;
+        }
+
+        OrangeCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", OrangeCost);
+        OrangePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", OrangePower);
+
+        if (currentSaved >= OrangeCost)
+        {
+            OrangeButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            OrangeButton.GetComponent<Button>().interactable = false;
         }
     }
 }
