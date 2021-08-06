@@ -27,6 +27,9 @@ public class SubmissionManager : MonoBehaviour
 
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
+    public GameObject AppleButton;
+    public GameObject RaspberryButton;
+    public GameObject PineappleButton;
 
     void Start()
     {
@@ -40,6 +43,9 @@ public class SubmissionManager : MonoBehaviour
 
         StrawberryButton.SetActive(false);
         OrangeButton.SetActive(false);
+        AppleButton.SetActive(false);
+        RaspberryButton.SetActive(false);
+        PineappleButton.SetActive(false);
     }
 
     void Update()
