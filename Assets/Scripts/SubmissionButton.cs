@@ -107,12 +107,13 @@ public class SubmissionButton : MonoBehaviour
 
     IEnumerator SequenceAnimations(Animation animation, string submissionName, string infoText, int enableType)
     {
-        animation.Rewind("InfoTextAnimation");
-        animation.Play("InfoTextAnimation");
-        while (animation.isPlaying)
-        {
-            yield return new WaitForEndOfFrame();
-        }
+        //animation.Rewind("InfoTextAnimation");
+        //animation.Play("InfoTextAnimation");
+        //while (animation.isPlaying)
+        //{
+        //    yield return new WaitForEndOfFrame();
+        //}
+        yield return new WaitForSeconds(5);
 
         switch (enableType)
         {
@@ -129,6 +130,6 @@ public class SubmissionButton : MonoBehaviour
 
         SubmissionName.GetComponent<Text>().text = submissionName;
         InfoDisplay.GetComponent<Text>().text = infoText;
-        animation.Play("InfoTextAnimation");
+        //animation.Play("InfoTextAnimation");
     }
 }
