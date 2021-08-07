@@ -22,6 +22,7 @@ public class SubmissionButton : MonoBehaviour
     public AudioSource BlamSound;
     public GameObject ChanceDisplay;
 
+    public GameObject MuteClocksButton;
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
     public GameObject RaspberryButton;
@@ -79,6 +80,7 @@ public class SubmissionButton : MonoBehaviour
         {
             SavedDisplay.SetActive(true);
             ChanceDisplay.SetActive(true);
+            MuteClocksButton.SetActive(true);
 
             InfoDisplay.GetComponent<Text>().text = StoryText.Story5;
             string secondInfoText = StoryText.Story6;

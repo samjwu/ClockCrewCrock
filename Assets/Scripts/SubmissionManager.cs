@@ -27,6 +27,7 @@ public class SubmissionManager : MonoBehaviour
     public int BlammedCount;
     public GameObject BlammedDisplay;
 
+    public GameObject MuteClocksButton;
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
     public GameObject RaspberryButton;
@@ -44,6 +45,7 @@ public class SubmissionManager : MonoBehaviour
         BlammedDisplay.SetActive(false);
         ChanceDisplay.SetActive(false);
 
+        MuteClocksButton.SetActive(false);
         StrawberryButton.SetActive(false);
         OrangeButton.SetActive(false);
         RaspberryButton.SetActive(false);

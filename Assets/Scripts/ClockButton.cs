@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ClockButton : MonoBehaviour
@@ -25,6 +26,9 @@ public class ClockButton : MonoBehaviour
     public GameObject SubmissionName;
     public GameObject InfoDisplay;
 
+    public static bool ClocksMuted = false;
+    public GameObject MuteClocksButton;
+
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
     public GameObject RaspberryButton;
@@ -32,6 +36,33 @@ public class ClockButton : MonoBehaviour
     public GameObject PineappleButton;
 
     private IEnumerator coroutine;
+
+    // OnClick Quiet Clocks
+    public void MuteClocks()
+    {
+        if (ClocksMuted == false)
+        {
+            StrawberrySound.volume = 0;
+            OrangeSound.volume = 0;
+            RaspberrySound.volume = 0;
+            AppleSound.volume = 0;
+            PineappleSound.volume = 0;
+            ClocksMuted = true;
+            MuteClocksButton.GetComponent<Image>().color = Color.red;
+            MuteClocksButton.GetComponentInChildren<Text>().text = "Speak up, Clocks!";
+        } 
+        else
+        {
+            StrawberrySound.volume = 100;
+            OrangeSound.volume = 100;
+            RaspberrySound.volume = 100;
+            AppleSound.volume = 100;
+            PineappleSound.volume = 100;
+            ClocksMuted = false;
+            MuteClocksButton.GetComponent<Image>().color = Color.blue;
+            MuteClocksButton.GetComponentInChildren<Text>().text = "Quiet, Clocks!";
+        }
+    }
 
     // On Click StrawberryButton
     public void LevelUpStrawberry()
@@ -178,6 +209,8 @@ public class ClockButton : MonoBehaviour
 
             coroutine = ContinueClockStory(sixthInfoText, N20);
             StartCoroutine(coroutine);
+
+            SceneManager.LoadScene(0);
         }
     }
 

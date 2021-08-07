@@ -28,7 +28,7 @@ public class StoryText
         "Foolish Newgrounders!";
     public static string Story4 = "However, Strawberry Clock knew the portal needed its King.\n\n" +
         "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n\n" +
-        "This too was glorious." +
+        "This too was glorious. " +
         "Keep clicking it until something happens!";
 
     public static string Story5 = "This time, the users listened. The legendary 'B' was saved.\n\n" +
