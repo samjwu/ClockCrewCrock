@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ClockLog : MonoBehaviour
 {
-    public GameObject ClockSubmitter;
+    //public GameObject ClockSubmitter;
     public AudioSource StrawberrySound;
     public AudioSource OrangeSound;
     public AudioSource RaspberrySound;
@@ -29,7 +29,7 @@ public class ClockLog : MonoBehaviour
     {
         StrawberrySound.Play();
 
-        ClockSubmitter.SetActive(true);
+        ClockSubmitter.StrawberryCreating = true;
         SubmissionManager.SavedSubmissions -= ClockManager.StrawberryCost;
         SubmissionManager.BlammedSubmissions += ClockManager.StrawberryCost;
 
@@ -53,7 +53,7 @@ public class ClockLog : MonoBehaviour
     {
         OrangeSound.Play();
 
-        ClockSubmitter.SetActive(true);
+        ClockSubmitter.OrangeCreating = true;
         SubmissionManager.SavedSubmissions -= ClockManager.OrangeCost;
         SubmissionManager.BlammedSubmissions += ClockManager.OrangeCost;
 
@@ -67,7 +67,7 @@ public class ClockLog : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story9;
             string secondInfoText = StoryText.Story10;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Apple);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Raspberry);
             StartCoroutine(coroutine);
         }
     }
@@ -77,21 +77,21 @@ public class ClockLog : MonoBehaviour
     {
         RaspberrySound.Play();
 
-        ClockSubmitter.SetActive(true);
+        ClockSubmitter.RaspberryCreating = true;
         SubmissionManager.SavedSubmissions -= ClockManager.RaspberryCost;
         SubmissionManager.BlammedSubmissions += ClockManager.RaspberryCost;
 
         ClockManager.RaspberryCost *= 2;
-        ClockManager.RaspberryPower += 4;
-        ClockManager.TotalPower += 4;
+        ClockManager.RaspberryPower += 3;
+        ClockManager.TotalPower += 3;
 
         ClockManager.RaspberryLevel += 1;
         if (ClockManager.RaspberryLevel == 5)
         {
-            InfoDisplay.GetComponent<Text>().text = StoryText.Story13;
-            string secondInfoText = StoryText.Story14;
+            InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
+            string secondInfoText = StoryText.Story12;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Pineapple);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Apple);
             StartCoroutine(coroutine);
         }
     }
@@ -101,21 +101,21 @@ public class ClockLog : MonoBehaviour
     {
         AppleSound.Play();
 
-        ClockSubmitter.SetActive(true);
+        ClockSubmitter.AppleCreating = true;
         SubmissionManager.SavedSubmissions -= ClockManager.AppleCost;
         SubmissionManager.BlammedSubmissions += ClockManager.AppleCost;
 
         ClockManager.AppleCost *= 2;
-        ClockManager.ApplePower += 3;
-        ClockManager.TotalPower += 3;
+        ClockManager.ApplePower += 4;
+        ClockManager.TotalPower += 4;
 
         ClockManager.AppleLevel += 1;
         if (ClockManager.AppleLevel == 5)
         {
-            InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
-            string secondInfoText = StoryText.Story12;
+            InfoDisplay.GetComponent<Text>().text = StoryText.Story13;
+            string secondInfoText = StoryText.Story14;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Raspberry);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Pineapple);
             StartCoroutine(coroutine);
         }
     }
@@ -125,7 +125,7 @@ public class ClockLog : MonoBehaviour
     {
         PineappleSound.Play();
 
-        ClockSubmitter.SetActive(true);
+        ClockSubmitter.PineappleCreating = true;
         SubmissionManager.SavedSubmissions -= ClockManager.PineappleCost;
         SubmissionManager.BlammedSubmissions += ClockManager.PineappleCost;
 
@@ -138,8 +138,16 @@ public class ClockLog : MonoBehaviour
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story15;
             string secondInfoText = StoryText.Story16;
+            string thirdInfoText = StoryText.Story17;
+            string fourthInfoText = StoryText.Story18;
 
             coroutine = SequenceClockStory(secondInfoText, -1);
+            StartCoroutine(coroutine);
+
+            coroutine = SequenceClockStory(thirdInfoText, -1);
+            StartCoroutine(coroutine);
+
+            coroutine = SequenceClockStory(fourthInfoText, -1);
             StartCoroutine(coroutine);
         }
     }

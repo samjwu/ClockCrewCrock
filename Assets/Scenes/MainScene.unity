@@ -157,11 +157,11 @@ RectTransform:
   - {fileID: 386105871}
   - {fileID: 858848805}
   m_Father: {fileID: 1506703133}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 375, y: 206}
+  m_AnchoredPosition: {x: -5, y: 206}
   m_SizeDelta: {x: 380, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6322440
@@ -706,8 +706,8 @@ MonoBehaviour:
   ChanceDisplay: {fileID: 575953999}
   StrawberryButton: {fileID: 160012895}
   OrangeButton: {fileID: 1424220297}
-  AppleButton: {fileID: 215552694}
   RaspberryButton: {fileID: 6322438}
+  AppleButton: {fileID: 215552694}
   PineappleButton: {fileID: 1554000575}
   InfoDisplay: {fileID: 1049305181}
 --- !u!4 &164744020
@@ -736,12 +736,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98b6884586a1424481180cb1fda5ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClockSubmitter: {fileID: 1570386074}
   StrawberrySound: {fileID: 1699134631}
   OrangeSound: {fileID: 265065738}
-  AppleSound: {fileID: 713647805}
   RaspberrySound: {fileID: 259181041}
+  AppleSound: {fileID: 713647805}
   PineappleSound: {fileID: 1313729984}
+  SubmitButton: {fileID: 568871826}
+  SubmissionName: {fileID: 1553643534}
+  InfoDisplay: {fileID: 1049305181}
+  StrawberryButton: {fileID: 160012895}
+  OrangeButton: {fileID: 1424220297}
+  RaspberryButton: {fileID: 6322438}
+  AppleButton: {fileID: 215552694}
+  PineappleButton: {fileID: 1554000575}
 --- !u!1 &179111073
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,11 +941,11 @@ RectTransform:
   - {fileID: 1343138210}
   - {fileID: 475943990}
   m_Father: {fileID: 1506703133}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 206}
+  m_AnchoredPosition: {x: 375, y: 206}
   m_SizeDelta: {x: 380, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215552696
@@ -1064,7 +1071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &259181041
 AudioSource:
@@ -1409,8 +1416,8 @@ MonoBehaviour:
   BlammedDisplay: {fileID: 383582873}
   StrawberryButton: {fileID: 160012895}
   OrangeButton: {fileID: 1424220297}
-  AppleButton: {fileID: 215552694}
   RaspberryButton: {fileID: 6322438}
+  AppleButton: {fileID: 215552694}
   PineappleButton: {fileID: 1554000575}
 --- !u!4 &354055711
 Transform:
@@ -1441,23 +1448,18 @@ MonoBehaviour:
   currentSaved: 0
   StrawberryButton: {fileID: 160012895}
   StrawberryCostText: {fileID: 286239488}
-  StrawberryText: {fileID: 41307738}
   StrawberryPowerText: {fileID: 898738752}
   OrangeButton: {fileID: 1424220297}
   OrangeCostText: {fileID: 1206169445}
-  OrangeText: {fileID: 485258003}
   OrangePowerText: {fileID: 1331560602}
-  AppleButton: {fileID: 215552694}
-  AppleCostText: {fileID: 1358388375}
-  AppleText: {fileID: 1343138209}
-  ApplePowerText: {fileID: 475943989}
   RaspberryButton: {fileID: 6322438}
   RaspberryCostText: {fileID: 480595115}
-  RaspberryText: {fileID: 386105870}
   RaspberryPowerText: {fileID: 858848804}
+  AppleButton: {fileID: 215552694}
+  AppleCostText: {fileID: 1358388375}
+  ApplePowerText: {fileID: 475943989}
   PineappleButton: {fileID: 1554000575}
   PineappleCostText: {fileID: 460204293}
-  PineappleText: {fileID: 1651262228}
   PineapplePowerText: {fileID: 650006947}
 --- !u!1 &383582873
 GameObject:
@@ -2018,8 +2020,8 @@ Transform:
   - {fileID: 1803274947}
   - {fileID: 1699134630}
   - {fileID: 265065737}
-  - {fileID: 713647804}
   - {fileID: 259181040}
+  - {fileID: 713647804}
   - {fileID: 1313729983}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2426,7 +2428,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &713647805
 AudioSource:
@@ -3642,29 +3644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ClockCrew > u @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@@@@@@@@@@@
-
-    @@@@@@@@@@'
+  m_Text: ClockCrew > u @@@@@@@@@@
 --- !u!222 &1343138212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4083,8 +4063,8 @@ RectTransform:
   - {fileID: 383582876}
   - {fileID: 160012896}
   - {fileID: 1424220298}
-  - {fileID: 215552695}
   - {fileID: 6322439}
+  - {fileID: 215552695}
   - {fileID: 1554000576}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -4324,7 +4304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1570386075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4338,13 +4318,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StrawberrySubmitting: 0
-  StrawberryCreating: 0
   OrangeSubmitting: 0
   OrangeCreating: 0
-  AppleSubmitting: 0
-  AppleCreating: 0
   RaspberrySubmitting: 0
   RaspberryCreating: 0
+  AppleSubmitting: 0
+  AppleCreating: 0
   PineappleSubmitting: 0
   PineappleCreating: 0
 --- !u!4 &1570386076

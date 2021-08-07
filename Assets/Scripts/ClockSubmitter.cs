@@ -6,68 +6,63 @@ public class ClockSubmitter : MonoBehaviour
 {
     public static int StrawberrySubmitOutput;
     public int StrawberrySubmitting;
-    public bool StrawberryCreating = false;
+    public static bool StrawberryCreating = false;
 
     public static int OrangeSubmitOutput;
     public int OrangeSubmitting;
-    public bool OrangeCreating = false;
+    public static bool OrangeCreating = false;
 
     public static int RaspberrySubmitOutput;
     public int RaspberrySubmitting;
-    public bool RaspberryCreating = false;
+    public static bool RaspberryCreating = false;
 
     public static int AppleSubmitOutput;
     public int AppleSubmitting;
-    public bool AppleCreating = false;
+    public static bool AppleCreating = false;
 
     public static int PineappleSubmitOutput;
     public int PineappleSubmitting;
-    public bool PineappleCreating = false;
+    public static bool PineappleCreating = false;
     
     void Update()
     {
         StrawberrySubmitOutput = ClockManager.StrawberryPower;
         StrawberrySubmitting = StrawberrySubmitOutput;
 
-        if (StrawberryCreating == false)
+        if (StrawberryCreating == true)
         {
-            StrawberryCreating = true;
             StartCoroutine(StrawberryCreate());
         }
 
         OrangeSubmitOutput = ClockManager.OrangePower;
         OrangeSubmitting = OrangeSubmitOutput;
 
-        if (OrangeCreating == false)
+        if (OrangeCreating == true)
         {
-            OrangeCreating = true;
             StartCoroutine(OrangeCreate());
         }
 
         RaspberrySubmitOutput = ClockManager.RaspberryPower;
         RaspberrySubmitting = RaspberrySubmitOutput;
 
-        if (RaspberryCreating == false)
+        if (RaspberryCreating == true)
         {
-            RaspberryCreating = true;
             StartCoroutine(RaspberryCreate());
         }
 
         AppleSubmitOutput = ClockManager.ApplePower;
         AppleSubmitting = AppleSubmitOutput;
 
-        if (AppleCreating == false)
+        if (AppleCreating == true)
         {
-            AppleCreating = true;
             StartCoroutine(AppleCreate());
         }
 
         PineappleSubmitOutput = ClockManager.PineapplePower;
         PineappleSubmitting = PineappleSubmitOutput;
 
-        if (PineappleCreating == false)
+        if (PineappleCreating == true)
         {
-            PineappleCreating = true;
             StartCoroutine(PineappleCreate());
         }
     }

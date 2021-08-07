@@ -11,35 +11,30 @@ public class ClockManager : MonoBehaviour
     public static int StrawberryPower = 1;
     public GameObject StrawberryButton;
     public GameObject StrawberryCostText;
-    public GameObject StrawberryText;
     public GameObject StrawberryPowerText;
 
     public static int OrangeCost = 2;
     public static int OrangePower = 2;
     public GameObject OrangeButton;
     public GameObject OrangeCostText;
-    public GameObject OrangeText;
     public GameObject OrangePowerText;
 
     public static int RaspberryCost = 4;
     public static int RaspberryPower = 3;
     public GameObject RaspberryButton;
     public GameObject RaspberryCostText;
-    public GameObject RaspberryText;
     public GameObject RaspberryPowerText;
 
     public static int AppleCost = 8;
     public static int ApplePower = 4;
     public GameObject AppleButton;
     public GameObject AppleCostText;
-    public GameObject AppleText;
     public GameObject ApplePowerText;
 
     public static int PineappleCost = 16;
     public static int PineapplePower = 5;
     public GameObject PineappleButton;
     public GameObject PineappleCostText;
-    public GameObject PineappleText;
     public GameObject PineapplePowerText;
 
     public static int StrawberryLevel = 0;
@@ -54,7 +49,7 @@ public class ClockManager : MonoBehaviour
         currentSaved = SubmissionManager.SavedSubmissions;
         
         StrawberryCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", StrawberryCost);
-        StrawberryPowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", StrawberryPower);
+        StrawberryPowerText.GetComponent<Text>().text = string.Format("Output (Saves/Sec): {0:g}", StrawberryPower);
 
         if (currentSaved >= StrawberryCost) 
         {
@@ -65,7 +60,7 @@ public class ClockManager : MonoBehaviour
         }
 
         OrangeCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", OrangeCost);
-        OrangePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", OrangePower);
+        OrangePowerText.GetComponent<Text>().text = string.Format("Output (Saves/Sec): {0:g}", OrangePower);
 
         if (currentSaved >= OrangeCost)
         {
@@ -77,7 +72,7 @@ public class ClockManager : MonoBehaviour
         }
 
         RaspberryCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", RaspberryCost);
-        RaspberryPowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", RaspberryPower);
+        RaspberryPowerText.GetComponent<Text>().text = string.Format("Output (Saves/Sec): {0:g}", RaspberryPower);
 
         if (currentSaved >= RaspberryCost)
         {
@@ -89,7 +84,7 @@ public class ClockManager : MonoBehaviour
         }
 
         AppleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", AppleCost);
-        ApplePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", ApplePower);
+        ApplePowerText.GetComponent<Text>().text = string.Format("Output (Saves/Sec): {0:g}", ApplePower);
 
         if (currentSaved >= AppleCost)
         {
@@ -101,7 +96,7 @@ public class ClockManager : MonoBehaviour
         }
 
         PineappleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", PineappleCost);
-        PineapplePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", PineapplePower);
+        PineapplePowerText.GetComponent<Text>().text = string.Format("Output (Saves/Sec): {0:g}", PineapplePower);
 
         if (currentSaved >= PineappleCost)
         {
