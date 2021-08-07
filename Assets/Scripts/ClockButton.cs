@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ClockButton : MonoBehaviour
 {
+    public AudioSource Narrator;
+    public AudioClip N7, N8, N9, N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N20;
+
     public AudioSource BgmPlayer;
     public AudioClip Milk1;
     public AudioClip Milk2;
@@ -52,7 +55,7 @@ public class ClockButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story7;
             string secondInfoText = StoryText.Story8;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Orange);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Orange, N7, N8);
             StartCoroutine(coroutine);
         }
     }
@@ -79,7 +82,7 @@ public class ClockButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story9;
             string secondInfoText = StoryText.Story10;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Raspberry);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Raspberry, N9, N10);
             StartCoroutine(coroutine);
         }
     }
@@ -106,7 +109,7 @@ public class ClockButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
             string secondInfoText = StoryText.Story12;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Apple);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Apple, N11, N12);
             StartCoroutine(coroutine);
         }
     }
@@ -133,7 +136,7 @@ public class ClockButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story13;
             string secondInfoText = StoryText.Story14;
 
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Pineapple);
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Pineapple, N13, N14);
             StartCoroutine(coroutine);
         }
     }
@@ -158,21 +161,32 @@ public class ClockButton : MonoBehaviour
             string secondInfoText = StoryText.Story16;
             string thirdInfoText = StoryText.Story17;
             string fourthInfoText = StoryText.Story18;
+            string fifthInfoText = StoryText.Story19;
+            string sixthInfoText = StoryText.Story20;
 
-            coroutine = SequenceClockStory(secondInfoText, -1);
+            coroutine = SequenceClockStory(secondInfoText, -1, N15, N16);
             StartCoroutine(coroutine);
 
-            coroutine = SequenceClockStory(thirdInfoText, -1);
+            coroutine = ContinueClockStory(thirdInfoText, N17);
             StartCoroutine(coroutine);
 
-            coroutine = SequenceClockStory(fourthInfoText, -1);
+            coroutine = ContinueClockStory(fourthInfoText, N18);
+            StartCoroutine(coroutine);
+
+            coroutine = ContinueClockStory(fifthInfoText, N19);
+            StartCoroutine(coroutine);
+
+            coroutine = ContinueClockStory(sixthInfoText, N20);
             StartCoroutine(coroutine);
         }
     }
 
-    public IEnumerator SequenceClockStory(string infoText, int enableType)
+    public IEnumerator SequenceClockStory(string infoText, int enableType, AudioClip clip1, AudioClip clip2)
     {
-        yield return new WaitForSeconds(5);
+        Narrator.clip = clip1;
+        Narrator.Play();
+
+        yield return new WaitWhile(() => Narrator.isPlaying);
 
         switch (enableType)
         {
@@ -199,5 +213,18 @@ public class ClockButton : MonoBehaviour
         }
 
         InfoDisplay.GetComponent<Text>().text = infoText;
+
+        Narrator.clip = clip2;
+        Narrator.Play();
+    }
+
+    public IEnumerator ContinueClockStory(string infoText, AudioClip clip1)
+    {
+        yield return new WaitWhile(() => Narrator.isPlaying);
+
+        InfoDisplay.GetComponent<Text>().text = infoText;
+
+        Narrator.clip = clip1;
+        Narrator.Play();
     }
 }

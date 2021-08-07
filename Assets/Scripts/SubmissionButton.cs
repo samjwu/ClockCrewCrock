@@ -7,6 +7,9 @@ public class SubmissionButton : MonoBehaviour
 {
     public static bool SeenBHistory = false;
 
+    public AudioSource Narrator;
+    public AudioClip N1, N2, N3, N4, N5, N6;
+
     public GameObject TitleDisplay;
     public GameObject SubmitButton;
     public GameObject SubmissionName;
@@ -35,7 +38,7 @@ public class SubmissionButton : MonoBehaviour
         InfoDisplay.GetComponent<Text>().text = StoryText.Story1;
         string secondInfoText = StoryText.Story2;
 
-        coroutine = SequenceSubmissions("A", secondInfoText, (int)StoryText.EnableTypes.Submit);
+        coroutine = SequenceSubmissions("A", secondInfoText, (int)StoryText.EnableTypes.Submit, N1, N2);
         StartCoroutine(coroutine);
     }
 
@@ -56,7 +59,7 @@ public class SubmissionButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story3;
             string secondInfoText = StoryText.Story4;
 
-            coroutine = SequenceSubmissions("B", secondInfoText, (int)StoryText.EnableTypes.Submit);
+            coroutine = SequenceSubmissions("B", secondInfoText, (int)StoryText.EnableTypes.Submit, N3, N4);
             StartCoroutine(coroutine);
 
             SubmissionManager.BlammedSubmissions++;
@@ -80,17 +83,20 @@ public class SubmissionButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story5;
             string secondInfoText = StoryText.Story6;
 
-            coroutine = SequenceSubmissions("B", secondInfoText, (int)StoryText.EnableTypes.Strawberry);
+            coroutine = SequenceSubmissions("B", secondInfoText, (int)StoryText.EnableTypes.Strawberry, N5, N6);
             StartCoroutine(coroutine);
 
             SeenBHistory = true;
         }
     }
 
-    public IEnumerator SequenceSubmissions(string submissionName, string infoText, int enableType)
+    public IEnumerator SequenceSubmissions(string submissionName, string infoText, int enableType, AudioClip clip1, AudioClip clip2)
     {
-        yield return new WaitForSeconds(5);
+        Narrator.clip = clip1;
+        Narrator.Play();
 
+        yield return new WaitWhile(() => Narrator.isPlaying);
+        
         switch (enableType)
         {
             case (int)StoryText.EnableTypes.Submit:
@@ -115,5 +121,8 @@ public class SubmissionButton : MonoBehaviour
 
         SubmissionName.GetComponent<Text>().text = submissionName;
         InfoDisplay.GetComponent<Text>().text = infoText;
+
+        Narrator.clip = clip2;
+        Narrator.Play();
     }
 }
