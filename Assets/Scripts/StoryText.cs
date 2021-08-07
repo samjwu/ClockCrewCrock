@@ -24,8 +24,9 @@ public class StoryText
         "Click it. NOW!";
 
     public static string Story3 = "The foolish users of Newgrounds, not recognizing the genius of Strawberry Clock, BLAMMED 'A'.\n\n" +
-        "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";
-    public static string Story4 = "However, StrawberryClock knew the portal needed its King.\n\n" +
+        "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again..." +
+        "Foolish Newgrounders!";
+    public static string Story4 = "However, Strawberry Clock knew the portal needed its King.\n\n" +
         "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n\n" +
         "This too was glorious.\n\n" +
         "Keep clicking it until something happens!";
@@ -44,7 +45,6 @@ public class StoryText
         "The creator of the universe, seeker of truth, and most importantly, the one who started the Clock Crew.\n\n" +
         "You are permitted to touch my greatness.";
 
-    // fix
     public static string Story9 = "The clock after the legendary Raspberry Clock was the legendary Apple Clock.\n\n" +
         "This prolific award winning author is known for making the most spam submissions in the Clock Crew.\n\n" +
         "The Clock Crew is the BIGGEST TOPIC EVER!";
@@ -72,5 +72,11 @@ public class StoryText
     public static string Story17 = "After Pineapple Clock there were a bunch of other clocks but who cares? Only fruit clocks matter! Go watch the Clock War Trilogy!\n\n" +
         "There were other Crews like the Locks and Glocks but those guys were posers! Clocks were the first and the best!" +
         "And don't listen to the Anti-Clock Crew! They're just a bunch of haters!\n\n";
-    public static string Story18 = "The End";
+    public static string Story18 = "The End.\n\nFor real.\n\nNow go away.";
+    public static string Story19 = "Are you seriously still here?!\n\n" + 
+        "Look, if you are looking for Easter eggs, you should have already seen like 5! (hint hint: YOU SHOULD VOTE 5)\n\n" + 
+        "There's no secret content past here!";
+    public static string Story20 = "Now listen here you Lazy Bum! The Official Clock Crew Crock writer is getting tired of making more content for you!" + 
+        "He's about due to pull the plug any moment now!" + 
+        "In fact-";
 }
