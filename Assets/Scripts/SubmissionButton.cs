@@ -20,8 +20,8 @@ public class SubmissionButton : MonoBehaviour
 
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
-    public GameObject AppleButton;
     public GameObject RaspberryButton;
+    public GameObject AppleButton;
     public GameObject PineappleButton;
 
     public GameObject InfoDisplay;
@@ -100,11 +100,11 @@ public class SubmissionButton : MonoBehaviour
             case (int)StoryText.EnableTypes.Orange:
                 OrangeButton.SetActive(true);
                 break;
-            case (int)StoryText.EnableTypes.Apple:
-                AppleButton.SetActive(true);
-                break;
             case (int)StoryText.EnableTypes.Raspberry:
                 RaspberryButton.SetActive(true);
+                break;
+            case (int)StoryText.EnableTypes.Apple:
+                AppleButton.SetActive(true);
                 break;
             case (int)StoryText.EnableTypes.Pineapple:
                 PineappleButton.SetActive(true);
