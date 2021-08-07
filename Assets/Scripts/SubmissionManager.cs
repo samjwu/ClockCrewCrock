@@ -55,7 +55,7 @@ public class SubmissionManager : MonoBehaviour
     {
         SubmissionCount = SentSubmissions;
 
-        PowerDisplay.GetComponent<Text>().text = string.Format("Submission Power: {0:g}%", ClockManager.TotalPower);
+        PowerDisplay.GetComponent<Text>().text = string.Format("Submission Power: {0:g}", ClockManager.TotalPower);
 
         SaveChance = Math.Min(0.5f + (float) SavedCount / 10000f, 1f);
         ChanceDisplay.GetComponent<Text>().text = string.Format("Save Chance: {0:n}%", SaveChance*100);

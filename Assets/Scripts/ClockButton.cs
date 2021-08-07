@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClockLog : MonoBehaviour
+public class ClockButton : MonoBehaviour
 {
+    public AudioSource BgmPlayer;
+    public AudioClip Milk1;
+    public AudioClip Milk2;
+    public AudioClip Yer;
+    public AudioClip Jam;
+    public AudioClip Dreams;
+
     public AudioSource StrawberrySound;
     public AudioSource OrangeSound;
     public AudioSource RaspberrySound;
