@@ -46,6 +46,9 @@ public class ClockButton : MonoBehaviour
         ClockManager.StrawberryLevel += 1;
         if (ClockManager.StrawberryLevel == ClockManager.LevelThreshold)
         {
+            BgmPlayer.clip = Milk2;
+            BgmPlayer.Play();
+
             InfoDisplay.GetComponent<Text>().text = StoryText.Story7;
             string secondInfoText = StoryText.Story8;
 
@@ -70,6 +73,9 @@ public class ClockButton : MonoBehaviour
         ClockManager.OrangeLevel += 1;
         if (ClockManager.OrangeLevel == ClockManager.LevelThreshold)
         {
+            BgmPlayer.clip = Yer;
+            BgmPlayer.Play();
+
             InfoDisplay.GetComponent<Text>().text = StoryText.Story9;
             string secondInfoText = StoryText.Story10;
 
@@ -94,6 +100,9 @@ public class ClockButton : MonoBehaviour
         ClockManager.RaspberryLevel += 1;
         if (ClockManager.RaspberryLevel == ClockManager.LevelThreshold)
         {
+            BgmPlayer.clip = Jam;
+            BgmPlayer.Play();
+
             InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
             string secondInfoText = StoryText.Story12;
 
@@ -118,6 +127,9 @@ public class ClockButton : MonoBehaviour
         ClockManager.AppleLevel += 1;
         if (ClockManager.AppleLevel == ClockManager.LevelThreshold)
         {
+            BgmPlayer.clip = Dreams;
+            BgmPlayer.Play();
+
             InfoDisplay.GetComponent<Text>().text = StoryText.Story13;
             string secondInfoText = StoryText.Story14;
 
