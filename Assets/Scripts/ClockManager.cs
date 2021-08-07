@@ -8,36 +8,36 @@ public class ClockManager : MonoBehaviour
     public int currentSaved;
 
     public static int StrawberryCost = 1;
-    public static int StrawberryPower = 1;
+    public static int StrawberryPower = 0;
     public GameObject StrawberryButton;
     public GameObject StrawberryCostText;
     public GameObject StrawberryPowerText;
 
     public static int OrangeCost = 2;
-    public static int OrangePower = 2;
+    public static int OrangePower = 0;
     public GameObject OrangeButton;
     public GameObject OrangeCostText;
     public GameObject OrangePowerText;
 
     public static int RaspberryCost = 4;
-    public static int RaspberryPower = 3;
+    public static int RaspberryPower = 0;
     public GameObject RaspberryButton;
     public GameObject RaspberryCostText;
     public GameObject RaspberryPowerText;
 
     public static int AppleCost = 8;
-    public static int ApplePower = 4;
+    public static int ApplePower = 0;
     public GameObject AppleButton;
     public GameObject AppleCostText;
     public GameObject ApplePowerText;
 
     public static int PineappleCost = 16;
-    public static int PineapplePower = 5;
+    public static int PineapplePower = 0;
     public GameObject PineappleButton;
     public GameObject PineappleCostText;
     public GameObject PineapplePowerText;
 
-    public static int LevelThreshold = 10;
+    public static int LevelThreshold = 8;
     public static int StrawberryLevel = 0;
     public static int OrangeLevel = 0;
     public static int AppleLevel = 0;

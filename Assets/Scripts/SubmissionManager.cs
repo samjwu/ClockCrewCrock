@@ -14,6 +14,8 @@ public class SubmissionManager : MonoBehaviour
     public GameObject SubmitButton;
     public GameObject StatusDisplay;
 
+    public GameObject PowerDisplay;
+
     public static float SaveChance;
     public GameObject ChanceDisplay;
 
@@ -37,6 +39,7 @@ public class SubmissionManager : MonoBehaviour
         SubmitButton.SetActive(false);
         StatusDisplay.SetActive(false);
 
+        PowerDisplay.SetActive(false);
         SavedDisplay.SetActive(false);
         BlammedDisplay.SetActive(false);
         ChanceDisplay.SetActive(false);
@@ -51,6 +54,8 @@ public class SubmissionManager : MonoBehaviour
     void Update()
     {
         SubmissionCount = SentSubmissions;
+
+        PowerDisplay.GetComponent<Text>().text = string.Format("Submission Power: {0:g}%", ClockManager.TotalPower);
 
         SaveChance = Math.Min(0.5f + (float) SavedCount / 10000f, 1f);
         ChanceDisplay.GetComponent<Text>().text = string.Format("Save Chance: {0:n}%", SaveChance*100);

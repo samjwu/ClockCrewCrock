@@ -60,7 +60,7 @@ public class StoryText
         "You are allowed to tap my being!";
 
     public static string Story13 = "The fifth and final clock was the legendary Pineapple Clock.\n\n" +
-        "This sensible clock helped make the early Clock Crew websites, which were far superior to Google, Amazon, and Facebook.\n\n" +
+        "This clock worked on the early Clock Crew websites, which were far superior to Google and Amazon.\n\n" +
         "This was truly the beginning of A Clockwork Community.";
     public static string Story14 = "Yes. It is I, the shrewd Pineapple Clock!\n\n" +
         "The clock of sensibility, webmaster supreme, and final member of the original Clock Crew!\n\n" +

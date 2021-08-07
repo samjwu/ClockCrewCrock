@@ -12,6 +12,7 @@ public class SubmissionButton : MonoBehaviour
     public GameObject SubmissionName;
     public GameObject StatusDisplay;
 
+    public GameObject PowerDisplay;
     public GameObject SavedDisplay;
     public AudioSource SaveSound;
     public GameObject BlammedDisplay;
@@ -45,6 +46,7 @@ public class SubmissionButton : MonoBehaviour
         if (SubmissionName.GetComponent<Text>().text == "A")
         {
             TitleDisplay.SetActive(true);
+            PowerDisplay.SetActive(true);
             StatusDisplay.SetActive(true);
             StatusDisplay.GetComponent<Text>().text = "Your submission just got\nBLAMMED!";
             BlamSound.Play();
@@ -62,11 +64,11 @@ public class SubmissionButton : MonoBehaviour
             if (SubmissionManager.SaveChance >= Random.Range(0.0f, 1.0f)) {
                 StatusDisplay.GetComponent<Text>().text = "Your submission just got\nSAVED!";
                 SaveSound.Play();
-                SubmissionManager.SavedSubmissions++;
+                SubmissionManager.SavedSubmissions += ClockManager.TotalPower;
             } else {
                 StatusDisplay.GetComponent<Text>().text = "Your submission just got\nBLAMMED!";
                 BlamSound.Play();
-                SubmissionManager.BlammedSubmissions++;
+                SubmissionManager.BlammedSubmissions += ClockManager.TotalPower;
             }
         }
 
