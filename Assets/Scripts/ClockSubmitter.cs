@@ -12,23 +12,17 @@ public class ClockSubmitter : MonoBehaviour
     public int OrangeSubmitting;
     public bool OrangeCreating = false;
 
-    public static int AppleSubmitOutput;
-    public int AppleSubmitting;
-    public bool AppleCreating = false;
-
     public static int RaspberrySubmitOutput;
     public int RaspberrySubmitting;
     public bool RaspberryCreating = false;
 
+    public static int AppleSubmitOutput;
+    public int AppleSubmitting;
+    public bool AppleCreating = false;
+
     public static int PineappleSubmitOutput;
     public int PineappleSubmitting;
     public bool PineappleCreating = false;
-
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
@@ -50,15 +44,6 @@ public class ClockSubmitter : MonoBehaviour
             StartCoroutine(OrangeCreate());
         }
 
-        AppleSubmitOutput = ClockManager.ApplePower;
-        AppleSubmitting = AppleSubmitOutput;
-
-        if (AppleCreating == false)
-        {
-            AppleCreating = true;
-            StartCoroutine(AppleCreate());
-        }
-
         RaspberrySubmitOutput = ClockManager.RaspberryPower;
         RaspberrySubmitting = RaspberrySubmitOutput;
 
@@ -66,6 +51,15 @@ public class ClockSubmitter : MonoBehaviour
         {
             RaspberryCreating = true;
             StartCoroutine(RaspberryCreate());
+        }
+
+        AppleSubmitOutput = ClockManager.ApplePower;
+        AppleSubmitting = AppleSubmitOutput;
+
+        if (AppleCreating == false)
+        {
+            AppleCreating = true;
+            StartCoroutine(AppleCreate());
         }
 
         PineappleSubmitOutput = ClockManager.PineapplePower;
@@ -92,18 +86,18 @@ public class ClockSubmitter : MonoBehaviour
         OrangeCreating = false;
     }
 
-    IEnumerator AppleCreate()
-    {
-        SubmissionManager.SavedSubmissions += AppleSubmitting;
-        yield return new WaitForSeconds(1f);
-        AppleCreating = false;
-    }
-
     IEnumerator RaspberryCreate()
     {
         SubmissionManager.SavedSubmissions += RaspberrySubmitting;
         yield return new WaitForSeconds(1f);
         RaspberryCreating = false;
+    }
+
+    IEnumerator AppleCreate()
+    {
+        SubmissionManager.SavedSubmissions += AppleSubmitting;
+        yield return new WaitForSeconds(1f);
+        AppleCreating = false;
     }
 
     IEnumerator PineappleCreate()

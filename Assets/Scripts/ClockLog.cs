@@ -8,8 +8,8 @@ public class ClockLog : MonoBehaviour
     public GameObject ClockSubmitter;
     public AudioSource StrawberrySound;
     public AudioSource OrangeSound;
-    public AudioSource AppleSound;
     public AudioSource RaspberrySound;
+    public AudioSource AppleSound;
     public AudioSource PineappleSound;
 
     public GameObject SubmitButton;
@@ -18,21 +18,11 @@ public class ClockLog : MonoBehaviour
 
     public GameObject StrawberryButton;
     public GameObject OrangeButton;
-    public GameObject AppleButton;
     public GameObject RaspberryButton;
+    public GameObject AppleButton;
     public GameObject PineappleButton;
 
     private IEnumerator coroutine;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     // On Click StrawberryButton
     public void LevelUpStrawberry()
@@ -82,30 +72,6 @@ public class ClockLog : MonoBehaviour
         }
     }
 
-    // On Click AppleButton
-    public void LevelUpApple()
-    {
-        AppleSound.Play();
-
-        ClockSubmitter.SetActive(true);
-        SubmissionManager.SavedSubmissions -= ClockManager.AppleCost;
-        SubmissionManager.BlammedSubmissions += ClockManager.AppleCost;
-
-        ClockManager.AppleCost *= 2;
-        ClockManager.ApplePower += 3;
-        ClockManager.TotalPower += 3;
-
-        ClockManager.AppleLevel += 1;
-        if (ClockManager.AppleLevel == 5)
-        {
-            InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
-            string secondInfoText = StoryText.Story12;
-
-            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Raspberry);
-            StartCoroutine(coroutine);
-        }
-    }
-
     // On Click RaspberryButton
     public void LevelUpRaspberry()
     {
@@ -130,6 +96,30 @@ public class ClockLog : MonoBehaviour
         }
     }
 
+    // On Click AppleButton
+    public void LevelUpApple()
+    {
+        AppleSound.Play();
+
+        ClockSubmitter.SetActive(true);
+        SubmissionManager.SavedSubmissions -= ClockManager.AppleCost;
+        SubmissionManager.BlammedSubmissions += ClockManager.AppleCost;
+
+        ClockManager.AppleCost *= 2;
+        ClockManager.ApplePower += 3;
+        ClockManager.TotalPower += 3;
+
+        ClockManager.AppleLevel += 1;
+        if (ClockManager.AppleLevel == 5)
+        {
+            InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
+            string secondInfoText = StoryText.Story12;
+
+            coroutine = SequenceClockStory(secondInfoText, (int)StoryText.EnableTypes.Raspberry);
+            StartCoroutine(coroutine);
+        }
+    }
+
     // On Click PineappleButton
     public void LevelUpPineapple()
     {
@@ -143,8 +133,8 @@ public class ClockLog : MonoBehaviour
         ClockManager.PineapplePower += 5;
         ClockManager.TotalPower += 5;
 
-        ClockManager.StrawberryLevel += 1;
-        if (ClockManager.StrawberryLevel == 5)
+        ClockManager.PineappleLevel += 1;
+        if (ClockManager.PineappleLevel == 5)
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story15;
             string secondInfoText = StoryText.Story16;
@@ -169,14 +159,16 @@ public class ClockLog : MonoBehaviour
             case (int)StoryText.EnableTypes.Orange:
                 OrangeButton.SetActive(true);
                 break;
-            case (int)StoryText.EnableTypes.Apple:
-                AppleButton.SetActive(true);
-                break;
             case (int)StoryText.EnableTypes.Raspberry:
                 RaspberryButton.SetActive(true);
                 break;
+            case (int)StoryText.EnableTypes.Apple:
+                AppleButton.SetActive(true);
+                break;
             case (int)StoryText.EnableTypes.Pineapple:
                 PineappleButton.SetActive(true);
+                break;
+            case -1:
                 break;
         }
 

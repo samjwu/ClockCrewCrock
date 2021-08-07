@@ -21,19 +21,19 @@ public class ClockManager : MonoBehaviour
     public GameObject OrangeText;
     public GameObject OrangePowerText;
 
-    public static int AppleCost = 4;
-    public static int ApplePower = 3;
-    public GameObject AppleButton;
-    public GameObject AppleCostText;
-    public GameObject AppleText;
-    public GameObject ApplePowerText;
-
-    public static int RaspberryCost = 8;
-    public static int RaspberryPower = 4;
+    public static int RaspberryCost = 4;
+    public static int RaspberryPower = 3;
     public GameObject RaspberryButton;
     public GameObject RaspberryCostText;
     public GameObject RaspberryText;
     public GameObject RaspberryPowerText;
+
+    public static int AppleCost = 8;
+    public static int ApplePower = 4;
+    public GameObject AppleButton;
+    public GameObject AppleCostText;
+    public GameObject AppleText;
+    public GameObject ApplePowerText;
 
     public static int PineappleCost = 16;
     public static int PineapplePower = 5;
@@ -48,11 +48,6 @@ public class ClockManager : MonoBehaviour
     public static int RaspberryLevel = 0;
     public static int PineappleLevel = 0;
     public static int TotalPower = 1;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -81,18 +76,6 @@ public class ClockManager : MonoBehaviour
             OrangeButton.GetComponent<Button>().interactable = false;
         }
 
-        AppleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", AppleCost);
-        ApplePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", ApplePower);
-
-        if (currentSaved >= AppleCost)
-        {
-            AppleButton.GetComponent<Button>().interactable = true;
-        }
-        else
-        {
-            AppleButton.GetComponent<Button>().interactable = false;
-        }
-
         RaspberryCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", RaspberryCost);
         RaspberryPowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", RaspberryPower);
 
@@ -103,6 +86,18 @@ public class ClockManager : MonoBehaviour
         else
         {
             RaspberryButton.GetComponent<Button>().interactable = false;
+        }
+
+        AppleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", AppleCost);
+        ApplePowerText.GetComponent<Text>().text = string.Format("Output (Submissions/Sec): {0:g}", ApplePower);
+
+        if (currentSaved >= AppleCost)
+        {
+            AppleButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            AppleButton.GetComponent<Button>().interactable = false;
         }
 
         PineappleCostText.GetComponent<Text>().text = string.Format("Cost (Saves): {0:g}", PineappleCost);
