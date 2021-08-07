@@ -43,4 +43,16 @@ public class StoryText
     public static string Story8 = "Yes. It is I, the legendary Orange Clock.\n" +
         "The creator of the universe, seeker of mysteries, and most importantly, the one who started the Clock Crew.\n" +
         "You are permitted to touch this greatness.";
+
+    public static string Story9;
+    public static string Story10;
+
+    public static string Story11;
+    public static string Story12;
+
+    public static string Story13;
+    public static string Story14;
+
+    public static string Story15;
+    public static string Story16;
 }
