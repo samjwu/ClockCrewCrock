@@ -44,23 +44,24 @@ public class StoryText
         "The creator of the universe, seeker of truth, and most importantly, the one who started the Clock Crew.\n\n" +
         "You are permitted to touch my greatness.";
 
-    public static string Story9 = "The clock that came after the legendary Raspberry Clock was the legendary Apple Clock.\n\n" +
-        "This prolific clock is a multi-award winning author known for having the most spam submissions among the members of the Clock Crew.\n\n" +
+    // fix
+    public static string Story9 = "The clock after the legendary Raspberry Clock was the legendary Apple Clock.\n\n" +
+        "This prolific award winning author is known for making the most spam submissions in the Clock Crew.\n\n" +
         "The Clock Crew is the BIGGEST TOPIC EVER!";
     public static string Story10 = "Yes. It is I, the friendly Raspberry Clock!\n\n" +
         "The saint of the Clock Crew, producer of animated masterpieces, and third member of the Clock Crew!\n\n" +
         "You are granted the right to feel my body!";
 
-    public static string Story11 = "The clock that followed the legendary Raspberry Clock was the legendary Apple Clock.\n\n" + 
+    public static string Story11 = "After the legendary Raspberry Clock was the legendary Apple Clock.\n\n" + 
         "Not much is known about this clock, except that he is a genius polyglot in the forums for @@@@@@@@@@.\n\n" + 
         "@@@@NEIL@@@@";
     public static string Story12 = "Yes. It is I, the elusive Apple Clock!\n\n" +
         "The clock of mysteries, master of spamming, and fourth member of the Clock Crew!\n\n" +
         "You are allowed to tap my being!";
 
-    public static string Story13 = "The fifth and final clock following the legendary Apple Clock was the legendary Pineapple Clock.\n\n" +
-        "This sensible clock assisted in the early versions of the Clock Crew websites, which were far superior to the likes of Google, Amazon, and Facebook.\n\n" +
-        "The membership of Pineapple Clock was truly the mark of the beginning of A Clockwork Community.";
+    public static string Story13 = "The fifth and final clock was the legendary Pineapple Clock.\n\n" +
+        "This sensible clock helped make the early Clock Crew websites, which were far superior to Google, Amazon, and Facebook.\n\n" +
+        "This was truly the beginning of A Clockwork Community.";
     public static string Story14 = "Yes. It is I, the shrewd Pineapple Clock!\n\n" +
         "The clock of sensibility, webmaster supreme, and final member of the original Clock Crew!\n\n" +
         "You are authorized to pat my figure!";
@@ -69,7 +70,7 @@ public class StoryText
         "It's over! Go away! You won!";
     public static string Story16 = "...Fine. You want more Clock Crew history? Here it is.\n\n";
     public static string Story17 = "After Pineapple Clock there were a bunch of other clocks but who cares? Only fruit clocks matter! Go watch the Clock War Trilogy!\n\n" +
-        "There were other Crews like the Locks and Glocks but those guys were posers! Clocks were first! And therefore the best!" +
-        "Don't listen to the Anti-Clock Crew! They're just a bunch of haters!\n\n";
+        "There were other Crews like the Locks and Glocks but those guys were posers! Clocks were the first and the best!" +
+        "And don't listen to the Anti-Clock Crew! They're just a bunch of haters!\n\n";
     public static string Story18 = "The End";
 }

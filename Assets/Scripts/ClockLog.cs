@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ClockLog : MonoBehaviour
 {
-    //public GameObject ClockSubmitter;
     public AudioSource StrawberrySound;
     public AudioSource OrangeSound;
     public AudioSource RaspberrySound;
@@ -29,7 +28,7 @@ public class ClockLog : MonoBehaviour
     {
         StrawberrySound.Play();
 
-        ClockSubmitter.StrawberryCreating = true;
+        ClockSubmitter.StrawberryOn = true;
         SubmissionManager.SavedSubmissions -= ClockManager.StrawberryCost;
         SubmissionManager.BlammedSubmissions += ClockManager.StrawberryCost;
 
@@ -53,7 +52,7 @@ public class ClockLog : MonoBehaviour
     {
         OrangeSound.Play();
 
-        ClockSubmitter.OrangeCreating = true;
+        ClockSubmitter.OrangeOn = true;
         SubmissionManager.SavedSubmissions -= ClockManager.OrangeCost;
         SubmissionManager.BlammedSubmissions += ClockManager.OrangeCost;
 
@@ -77,7 +76,7 @@ public class ClockLog : MonoBehaviour
     {
         RaspberrySound.Play();
 
-        ClockSubmitter.RaspberryCreating = true;
+        ClockSubmitter.RaspberryOn = true;
         SubmissionManager.SavedSubmissions -= ClockManager.RaspberryCost;
         SubmissionManager.BlammedSubmissions += ClockManager.RaspberryCost;
 
@@ -101,7 +100,7 @@ public class ClockLog : MonoBehaviour
     {
         AppleSound.Play();
 
-        ClockSubmitter.AppleCreating = true;
+        ClockSubmitter.AppleOn = true;
         SubmissionManager.SavedSubmissions -= ClockManager.AppleCost;
         SubmissionManager.BlammedSubmissions += ClockManager.AppleCost;
 
@@ -125,7 +124,7 @@ public class ClockLog : MonoBehaviour
     {
         PineappleSound.Play();
 
-        ClockSubmitter.PineappleCreating = true;
+        ClockSubmitter.PineappleOn = true;
         SubmissionManager.SavedSubmissions -= ClockManager.PineappleCost;
         SubmissionManager.BlammedSubmissions += ClockManager.PineappleCost;
 

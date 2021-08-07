@@ -6,22 +6,27 @@ public class ClockSubmitter : MonoBehaviour
 {
     public static int StrawberrySubmitOutput;
     public int StrawberrySubmitting;
+    public static bool StrawberryOn = false;
     public static bool StrawberryCreating = false;
 
     public static int OrangeSubmitOutput;
     public int OrangeSubmitting;
+    public static bool OrangeOn = false;
     public static bool OrangeCreating = false;
 
     public static int RaspberrySubmitOutput;
     public int RaspberrySubmitting;
+    public static bool RaspberryOn = false;
     public static bool RaspberryCreating = false;
 
     public static int AppleSubmitOutput;
     public int AppleSubmitting;
+    public static bool AppleOn = false;
     public static bool AppleCreating = false;
 
     public static int PineappleSubmitOutput;
     public int PineappleSubmitting;
+    public static bool PineappleOn = false;
     public static bool PineappleCreating = false;
     
     void Update()
@@ -29,40 +34,45 @@ public class ClockSubmitter : MonoBehaviour
         StrawberrySubmitOutput = ClockManager.StrawberryPower;
         StrawberrySubmitting = StrawberrySubmitOutput;
 
-        if (StrawberryCreating == true)
+        if (StrawberryOn == true && StrawberryCreating == false)
         {
+            StrawberryCreating = true;
             StartCoroutine(StrawberryCreate());
         }
 
         OrangeSubmitOutput = ClockManager.OrangePower;
         OrangeSubmitting = OrangeSubmitOutput;
 
-        if (OrangeCreating == true)
+        if (OrangeOn == true && OrangeCreating == false)
         {
+            OrangeCreating = true;
             StartCoroutine(OrangeCreate());
         }
 
         RaspberrySubmitOutput = ClockManager.RaspberryPower;
         RaspberrySubmitting = RaspberrySubmitOutput;
 
-        if (RaspberryCreating == true)
+        if (RaspberryOn == true && RaspberryCreating == false)
         {
+            RaspberryCreating = true;
             StartCoroutine(RaspberryCreate());
         }
 
         AppleSubmitOutput = ClockManager.ApplePower;
         AppleSubmitting = AppleSubmitOutput;
 
-        if (AppleCreating == true)
+        if (AppleOn == true && AppleCreating == false)
         {
+            AppleCreating = true;
             StartCoroutine(AppleCreate());
         }
 
         PineappleSubmitOutput = ClockManager.PineapplePower;
         PineappleSubmitting = PineappleSubmitOutput;
 
-        if (PineappleCreating == true)
+        if (PineappleOn == true && PineappleCreating == false)
         {
+            PineappleCreating = true;
             StartCoroutine(PineappleCreate());
         }
     }
