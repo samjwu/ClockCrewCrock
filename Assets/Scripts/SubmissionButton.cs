@@ -29,27 +29,12 @@ public class SubmissionButton : MonoBehaviour
 
     private IEnumerator coroutine;
 
-    enum EnableTypes
-    {
-        Submit = 0,
-        Strawberry = 1,
-        Orange = 2,
-        Apple = 3,
-        Raspberry = 4,
-        Pineapple = 5
-    }
-
     void Start()
     {
-        InfoDisplay.GetComponent<Text>().text = "First, there was nothing.\n" +
-            "Then, there was StrawberryClock.\n" +
-            "StrawberryClock is the true King of the Portal and God of Newgrounds.\n" +
-            "That Tom Fulp guy is just a lackey who carries out his will.";
-        string secondInfoText = "The first legendary submission by StrawberryClock was named 'A'.\n" +
-            "It was glorious.\n" +
-            "Click it now!";
+        InfoDisplay.GetComponent<Text>().text = StoryText.Story1;
+        string secondInfoText = StoryText.Story2;
 
-        coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "A", secondInfoText, (int) EnableTypes.Submit);
+        coroutine = SequenceAnimations("A", secondInfoText, (int)StoryText.EnableTypes.Submit);
         StartCoroutine(coroutine);
     }
 
@@ -66,14 +51,10 @@ public class SubmissionButton : MonoBehaviour
             BlammedDisplay.SetActive(true);
             SubmitButton.SetActive(false);
 
-            InfoDisplay.GetComponent<Text>().text = "The foolish users of Newgrounds, not recognizing the genius of StrawberryClock, BLAMMED 'A'.\n" +
-                    "Thus a legendary masterpiece was lost to the annals of portal history, never to be seen again...";
-            string secondInfoText = "However, StrawberryClock knew the portal needed its King.\n" + 
-                "Consequently, he produced a SECOND legendary submission by the name of 'B'.\n" + 
-                "This too was glorious.\n" + 
-                "Keep clicking it until something happens!";
+            InfoDisplay.GetComponent<Text>().text = StoryText.Story3;
+            string secondInfoText = StoryText.Story4;
 
-            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Submit);
+            coroutine = SequenceAnimations("B", secondInfoText, (int)StoryText.EnableTypes.Submit);
             StartCoroutine(coroutine);
 
             SubmissionManager.BlammedSubmissions++;
@@ -94,54 +75,43 @@ public class SubmissionButton : MonoBehaviour
             SavedDisplay.SetActive(true);
             ChanceDisplay.SetActive(true);
 
-            InfoDisplay.GetComponent<Text>().text = "This time, the users listened. The legendary 'B' was saved.\n" +
-            "Trillions of users began to worship the King of The Portal.\n" +
-            "Among these users were a group of clocks that formed the Clock Crew, a gathering of God-Kings and Supreme Beings...";
-            string secondInfoText = "Holy clock! Is that who I think it is?\n" +
-                "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n" +
-                "Quickly, click on him now!";
+            InfoDisplay.GetComponent<Text>().text = StoryText.Story5;
+            string secondInfoText = StoryText.Story6;
 
-            coroutine = SequenceAnimations(InfoDisplay.GetComponent<Animation>(), "B", secondInfoText, (int) EnableTypes.Strawberry);
+            coroutine = SequenceAnimations("B", secondInfoText, (int)StoryText.EnableTypes.Strawberry);
             StartCoroutine(coroutine);
 
             SeenBHistory = true;
         }
     }
 
-    IEnumerator SequenceAnimations(Animation animation, string submissionName, string infoText, int enableType)
+    public IEnumerator SequenceAnimations(string submissionName, string infoText, int enableType)
     {
-        //animation.Rewind("InfoTextAnimation");
-        //animation.Play("InfoTextAnimation");
-        //while (animation.isPlaying)
-        //{
-        //    yield return new WaitForEndOfFrame();
-        //}
         yield return new WaitForSeconds(5);
 
         switch (enableType)
         {
-            case (int) EnableTypes.Submit:
+            case (int)StoryText.EnableTypes.Submit:
                 SubmitButton.SetActive(true);
                 break;
-            case (int) EnableTypes.Strawberry:
+            case (int)StoryText.EnableTypes.Strawberry:
                 StrawberryButton.SetActive(true);
                 break;
-            case (int)EnableTypes.Orange:
+            case (int)StoryText.EnableTypes.Orange:
                 OrangeButton.SetActive(true);
                 break;
-            case (int)EnableTypes.Apple:
+            case (int)StoryText.EnableTypes.Apple:
                 AppleButton.SetActive(true);
                 break;
-            case (int)EnableTypes.Raspberry:
+            case (int)StoryText.EnableTypes.Raspberry:
                 RaspberryButton.SetActive(true);
                 break;
-            case (int)EnableTypes.Pineapple:
+            case (int)StoryText.EnableTypes.Pineapple:
                 PineappleButton.SetActive(true);
                 break;
         }
 
         SubmissionName.GetComponent<Text>().text = submissionName;
         InfoDisplay.GetComponent<Text>().text = infoText;
-        //animation.Play("InfoTextAnimation");
     }
 }

@@ -33,6 +33,12 @@ public class ClockLog : MonoBehaviour
         ClockManager.StrawberryCost *= 2;
         ClockManager.StrawberryPower += 1;
         ClockManager.TotalPower += 1;
+
+        ClockManager.StrawberryLevel += 1;
+        if (ClockManager.StrawberryLevel == 5)
+        {
+            // TODO
+        }
     }
 
     // On Click OrangeButton
@@ -59,8 +65,8 @@ public class ClockLog : MonoBehaviour
         SubmissionManager.BlammedSubmissions += ClockManager.AppleCost;
 
         ClockManager.AppleCost *= 2;
-        ClockManager.ApplePower += 2;
-        ClockManager.TotalPower += 2;
+        ClockManager.ApplePower += 3;
+        ClockManager.TotalPower += 3;
     }
 
     // On Click RaspberryButton
@@ -73,8 +79,8 @@ public class ClockLog : MonoBehaviour
         SubmissionManager.BlammedSubmissions += ClockManager.RaspberryCost;
 
         ClockManager.RaspberryCost *= 2;
-        ClockManager.RaspberryPower += 2;
-        ClockManager.TotalPower += 2;
+        ClockManager.RaspberryPower += 4;
+        ClockManager.TotalPower += 4;
     }
 
     // On Click PineappleButton
@@ -87,7 +93,7 @@ public class ClockLog : MonoBehaviour
         SubmissionManager.BlammedSubmissions += ClockManager.PineappleCost;
 
         ClockManager.PineappleCost *= 2;
-        ClockManager.PineapplePower += 2;
-        ClockManager.TotalPower += 2;
+        ClockManager.PineapplePower += 5;
+        ClockManager.TotalPower += 5;
     }
 }
