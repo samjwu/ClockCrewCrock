@@ -37,7 +37,7 @@ public class ClockLog : MonoBehaviour
         ClockManager.TotalPower += 1;
 
         ClockManager.StrawberryLevel += 1;
-        if (ClockManager.StrawberryLevel == 5)
+        if (ClockManager.StrawberryLevel == ClockManager.LevelThreshold)
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story7;
             string secondInfoText = StoryText.Story8;
@@ -61,7 +61,7 @@ public class ClockLog : MonoBehaviour
         ClockManager.TotalPower += 2;
 
         ClockManager.OrangeLevel += 1;
-        if (ClockManager.OrangeLevel == 5)
+        if (ClockManager.OrangeLevel == ClockManager.LevelThreshold)
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story9;
             string secondInfoText = StoryText.Story10;
@@ -85,7 +85,7 @@ public class ClockLog : MonoBehaviour
         ClockManager.TotalPower += 3;
 
         ClockManager.RaspberryLevel += 1;
-        if (ClockManager.RaspberryLevel == 5)
+        if (ClockManager.RaspberryLevel == ClockManager.LevelThreshold)
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story11;
             string secondInfoText = StoryText.Story12;
@@ -109,7 +109,7 @@ public class ClockLog : MonoBehaviour
         ClockManager.TotalPower += 4;
 
         ClockManager.AppleLevel += 1;
-        if (ClockManager.AppleLevel == 5)
+        if (ClockManager.AppleLevel == ClockManager.LevelThreshold)
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story13;
             string secondInfoText = StoryText.Story14;
@@ -133,7 +133,7 @@ public class ClockLog : MonoBehaviour
         ClockManager.TotalPower += 5;
 
         ClockManager.PineappleLevel += 1;
-        if (ClockManager.PineappleLevel == 5)
+        if (ClockManager.PineappleLevel == ClockManager.LevelThreshold)
         {
             InfoDisplay.GetComponent<Text>().text = StoryText.Story15;
             string secondInfoText = StoryText.Story16;

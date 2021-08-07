@@ -37,11 +37,12 @@ public class ClockManager : MonoBehaviour
     public GameObject PineappleCostText;
     public GameObject PineapplePowerText;
 
-    public static int StrawberryLevel = 1;
-    public static int OrangeLevel = 1;
-    public static int AppleLevel = 1;
-    public static int RaspberryLevel = 1;
-    public static int PineappleLevel = 1;
+    public static int LevelThreshold = 10;
+    public static int StrawberryLevel = 0;
+    public static int OrangeLevel = 0;
+    public static int AppleLevel = 0;
+    public static int RaspberryLevel = 0;
+    public static int PineappleLevel = 0;
     public static int TotalPower = 1;
 
     void Update()
