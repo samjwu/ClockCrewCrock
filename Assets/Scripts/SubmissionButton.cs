@@ -34,7 +34,7 @@ public class SubmissionButton : MonoBehaviour
         InfoDisplay.GetComponent<Text>().text = StoryText.Story1;
         string secondInfoText = StoryText.Story2;
 
-        coroutine = SequenceAnimations("A", secondInfoText, (int)StoryText.EnableTypes.Submit);
+        coroutine = SequenceSubmissions("A", secondInfoText, (int)StoryText.EnableTypes.Submit);
         StartCoroutine(coroutine);
     }
 
@@ -54,7 +54,7 @@ public class SubmissionButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story3;
             string secondInfoText = StoryText.Story4;
 
-            coroutine = SequenceAnimations("B", secondInfoText, (int)StoryText.EnableTypes.Submit);
+            coroutine = SequenceSubmissions("B", secondInfoText, (int)StoryText.EnableTypes.Submit);
             StartCoroutine(coroutine);
 
             SubmissionManager.BlammedSubmissions++;
@@ -78,14 +78,14 @@ public class SubmissionButton : MonoBehaviour
             InfoDisplay.GetComponent<Text>().text = StoryText.Story5;
             string secondInfoText = StoryText.Story6;
 
-            coroutine = SequenceAnimations("B", secondInfoText, (int)StoryText.EnableTypes.Strawberry);
+            coroutine = SequenceSubmissions("B", secondInfoText, (int)StoryText.EnableTypes.Strawberry);
             StartCoroutine(coroutine);
 
             SeenBHistory = true;
         }
     }
 
-    public IEnumerator SequenceAnimations(string submissionName, string infoText, int enableType)
+    public IEnumerator SequenceSubmissions(string submissionName, string infoText, int enableType)
     {
         yield return new WaitForSeconds(5);
 

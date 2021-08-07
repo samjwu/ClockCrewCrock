@@ -15,16 +15,6 @@ public class StoryText
         Pineapple = 5
     }
 
-    public GameObject SubmitButton;
-    public GameObject SubmissionName;
-    public GameObject InfoDisplay;
-
-    public GameObject StrawberryButton;
-    public GameObject OrangeButton;
-    public GameObject AppleButton;
-    public GameObject RaspberryButton;
-    public GameObject PineappleButton;
-
     public static string Story1 = "First, there was nothing.\n" +
         "Then, there was StrawberryClock.\n" +
         "StrawberryClock is the true King of the Portal and God of Newgrounds.\n" +
@@ -46,4 +36,11 @@ public class StoryText
     public static string Story6 = "Yes. It is I, the legendary Strawberry Clock.\n" +
         "It 'B' StrawberryClock himself! The leader of the Clock Crew!\n" +
         "You may click on my glorious form!";
+
+    public static string Story7 = "After the legendary Strawberry Clock followed the legendary Orange Clock.\n" +
+        "This godlike figure was the founder of the Clock Crew, making him the SECOND most important Clock.\n" +
+        "Strawberry Clock will always be NuMbAh OnE!1!1!";
+    public static string Story8 = "Yes. It is I, the legendary Orange Clock.\n" +
+        "The creator of the universe, seeker of mysteries, and most importantly, the one who started the Clock Crew.\n" +
+        "You are permitted to touch this greatness.";
 }
