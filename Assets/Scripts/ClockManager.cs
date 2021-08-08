@@ -37,7 +37,7 @@ public class ClockManager : MonoBehaviour
     public GameObject PineappleCostText;
     public GameObject PineapplePowerText;
 
-    public static int LevelThreshold = 10;
+    public static int LevelThreshold = 8;
     public static int StrawberryLevel = 0;
     public static int OrangeLevel = 0;
     public static int AppleLevel = 0;
