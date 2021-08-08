@@ -4,9 +4,9 @@
 
 An interactive retelling of [Newgrounds](https://www.newgrounds.com) [Portal History](https://www.newgrounds.com/wiki/about-newgrounds/history/flash-portal-history?path=/wiki/about-newgrounds/history/flash-portal-history) and the [Clock Crew](https://www.newgrounds.com/collection/clockcrew) from the perspective of [Strawberry Clock](https://strawberryclock.newgrounds.com/).
 
-### About
-
 ![Splash](splashsmall.png)
+
+### About
 
 Clock Crew Crock (AKA CCC) was made for [Clock Day 2021](https://www.newgrounds.com/collection/clockday2021)  
 (a celebration that occurs every August 15th - there's a whole [history](https://www.newgrounds.com/collection/clockcrewhistory)).

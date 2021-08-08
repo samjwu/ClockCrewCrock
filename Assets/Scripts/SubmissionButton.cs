@@ -31,7 +31,6 @@ public class SubmissionButton : MonoBehaviour
     public GameObject PineappleButton;
 
     public GameObject InfoDisplay;
-    private const float InfoAnimationLength = 7f;
 
     private IEnumerator coroutine;
 
