@@ -6724,7 +6724,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 164744021}
         m_TargetAssemblyTypeName: ClockButton, Assembly-CSharp
-        m_MethodName: MuteClocks
+        m_MethodName: MuteSubmissions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
