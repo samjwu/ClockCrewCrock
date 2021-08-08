@@ -18,6 +18,8 @@ You can beat it in under 5 minutes.
 
 ![Screenshot](screenshotsmall.png)
 
+![Screenshot2](screenshot2small.png)
+
 ## Satire (for the game submission)
 
 ### Game Description
