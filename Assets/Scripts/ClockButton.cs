@@ -26,6 +26,11 @@ public class ClockButton : MonoBehaviour
     public GameObject SubmissionName;
     public GameObject InfoDisplay;
 
+    public AudioSource SaveSound;
+    public AudioSource BlamSound;
+    public static bool SubmissionsMuted = false;
+    public GameObject MuteSubmissionsButton;
+
     public static bool ClocksMuted = false;
     public GameObject MuteClocksButton;
 
@@ -36,6 +41,27 @@ public class ClockButton : MonoBehaviour
     public GameObject PineappleButton;
 
     private IEnumerator coroutine;
+
+    // OnClick Quiet Submissions
+    public void MuteSubmissions()
+    {
+        if (ClocksMuted == false)
+        {
+            SaveSound.volume = 0;
+            BlamSound.volume = 0;
+            SubmissionsMuted = true;
+            MuteSubmissionsButton.GetComponent<Image>().color = Color.red;
+            MuteSubmissionsButton.GetComponentInChildren<Text>().text = "Unmute\nSubmissions";
+        }
+        else
+        {
+            SaveSound.volume = 75;
+            BlamSound.volume = 25;
+            SubmissionsMuted = false;
+            MuteSubmissionsButton.GetComponent<Image>().color = Color.blue;
+            MuteSubmissionsButton.GetComponentInChildren<Text>().text = "Mute\nSubmissions";
+        }
+    }
 
     // OnClick Quiet Clocks
     public void MuteClocks()
@@ -49,7 +75,7 @@ public class ClockButton : MonoBehaviour
             PineappleSound.volume = 0;
             ClocksMuted = true;
             MuteClocksButton.GetComponent<Image>().color = Color.red;
-            MuteClocksButton.GetComponentInChildren<Text>().text = "Speak up, Clocks!";
+            MuteClocksButton.GetComponentInChildren<Text>().text = "Speak up,\nClocks!";
         } 
         else
         {
@@ -60,7 +86,7 @@ public class ClockButton : MonoBehaviour
             PineappleSound.volume = 100;
             ClocksMuted = false;
             MuteClocksButton.GetComponent<Image>().color = Color.blue;
-            MuteClocksButton.GetComponentInChildren<Text>().text = "Quiet, Clocks!";
+            MuteClocksButton.GetComponentInChildren<Text>().text = "Quiet,\nClocks!";
         }
     }
 
@@ -265,6 +291,6 @@ public class ClockButton : MonoBehaviour
     public IEnumerator EndGame()
     {
         yield return new WaitWhile(() => Narrator.isPlaying);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
 }
