@@ -210,7 +210,8 @@ public class ClockButton : MonoBehaviour
             coroutine = ContinueClockStory(sixthInfoText, N20);
             StartCoroutine(coroutine);
 
-            SceneManager.LoadScene(0);
+            coroutine = EndGame();
+            StartCoroutine(coroutine);
         }
     }
 
@@ -259,5 +260,11 @@ public class ClockButton : MonoBehaviour
 
         Narrator.clip = clip1;
         Narrator.Play();
+    }
+
+    public IEnumerator EndGame()
+    {
+        yield return new WaitWhile(() => Narrator.isPlaying);
+        SceneManager.LoadScene(0);
     }
 }
