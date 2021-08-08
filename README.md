@@ -14,6 +14,10 @@ Strictly speaking, CCC is a clicker/incremental game, but it plays more like an 
 Since I don't really like incremental games that are either endless or take a long time to finish (eg: longer than a week), this game is short and sweet. (Like a strawberry!)
 You can beat it in under 5 minutes.
 
+![Splash](splashsmall.png)
+
+![Screenshot](screenshotsmall.png)
+
 ## Satire (for the game submission)
 
 ### Game Description
@@ -24,7 +28,7 @@ Click your way through Portal History, following "A" beginning of Strawberry Clo
 
 Learn of the Herculean tasks undertaken by the Clock Crew to bring peace and love to all the mouth-breathing simpletons &mdash;I mean intelligent, honored users of Newgrounds.
 
-Umm... this game is awesome. Vote 5. Also, make sure you beat it. It only takes 5 minutes. And remember to vote 5.  
+This will be the most amazing game that you will ever play in your life. Vote 5. Also, make sure you beat it. It only takes a couple minutes. And remember to vote 5.  
 Actually, you don't even have to play the game. Just vote 5 and favorite it.  
 DO IT NOW. VOTE 5.
 
@@ -34,7 +38,7 @@ Definitely not due to a lack of effort on my part.
 
 ### Motivation
 
-Since the original idea of Clock Day was to submit something that appears poorly made yet is humorous and satirical (I think), perhaps this is a suitable submission maybe?
+Since the original idea of Clock Day was to submit something that appears poorly made yet is humorous and satirical (I think), this is probably a suitable submission. Maybe.
 
 > "If you put in more than 50 dollars worth of effort you aren't doing it right.  
 > Unless you did it to make it look like you didn't put in that much effort in which case you ARE doing it right."  
