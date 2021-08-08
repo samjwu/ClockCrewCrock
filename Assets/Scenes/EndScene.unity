@@ -204,6 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332168005}
+  - component: {fileID: 332168006}
   m_Layer: 0
   m_Name: AgainObject
   m_TagString: Untagged
@@ -225,6 +226,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332168006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332168004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b468e760bd57549aec6ad1799b54b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AgainButton: {fileID: 790625683}
 --- !u!1 &469212383
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 790625686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 332168006}
+        m_TargetAssemblyTypeName: EndToSplash, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &790625686
 MonoBehaviour:
   m_ObjectHideFlags: 0

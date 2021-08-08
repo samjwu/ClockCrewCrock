@@ -10,11 +10,6 @@ public class SplashToMenu : MonoBehaviour
         StartCoroutine(LoadMenu());
     }
 
-    void Update()
-    {
-        
-    }
-
     IEnumerator LoadMenu()
     {
         yield return new WaitForSeconds(23);
