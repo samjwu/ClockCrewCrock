@@ -45,7 +45,7 @@ public class ClockButton : MonoBehaviour
     // OnClick Quiet Submissions
     public void MuteSubmissions()
     {
-        if (ClocksMuted == false)
+        if (SubmissionsMuted == false)
         {
             SaveSound.volume = 0;
             BlamSound.volume = 0;
