@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 68}
-  m_SizeDelta: {x: 800, y: 800}
+  m_AnchoredPosition: {x: 0, y: 35}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93706920
 MonoBehaviour:
@@ -229,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -367}
-  m_SizeDelta: {x: 1900, y: 400}
+  m_AnchoredPosition: {x: 0, y: -185.5}
+  m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375133545
 MonoBehaviour:
@@ -254,7 +254,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e23c0f70edf6f7040ae3fd5eac601a44, type: 3}
-    m_FontSize: 80
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -412,8 +412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 440}
-  m_SizeDelta: {x: 1900, y: 100}
+  m_AnchoredPosition: {x: 0, y: 235.5}
+  m_SizeDelta: {x: 912, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510724095
 MonoBehaviour:
@@ -437,7 +437,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e23c0f70edf6f7040ae3fd5eac601a44, type: 3}
-    m_FontSize: 60
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -489,11 +489,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 469212387}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -70}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -76.12}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 373, y: 280}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 181, y: 95}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &524665266
 Animation:
@@ -707,7 +707,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 58.71551
+  field of view: 58.727257
   orthographic: 1
   orthographic size: 9.6
   m_Depth: -1
