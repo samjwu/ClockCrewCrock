@@ -1,3 +1,5 @@
+**Play it on [Newgrounds](https://www.newgrounds.com/portal/view/810143) or here on [Github](https://samjwu.github.io/ClockCrewCrock/)**
+
 # Clock Crew Crock
 
 > *Try saying THAT 10 times really fast*
